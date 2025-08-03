@@ -1,16 +1,27 @@
-## Hi there 👋
+# 👋 Hello! I'm Bernardo Soares
 
-<!--
-**Dev-Soares/Dev-Soares** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Front-End Developer passionate about building functional, well-structured, and maintainable applications.  
+Currently working in IT support and infrastructure, I'm continuously learning and coding to grow as a software engineer.
 
-Here are some ideas to get you started:
+🎯 Focused on clean code, best practices, and continuous learning.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🛠️ Technologies & Tools
+
+- HTML, CSS, JavaScript  
+- React, Tailwind CSS  
+- Git & GitHub  
+- IT support, networks, and hardware maintenance
+
+---
+
+## 📫 Contact
+
+- 📧 bernardo.soares30@outlook.com  
+- 🔗 [LinkedIn](https://linkedin.com/in/bernardo-soares-150096364)  
+- 💻 [GitHub](https://github.com/Dev-Soares)
+
+---
+
+Thanks for visiting my profile!
