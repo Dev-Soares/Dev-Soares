@@ -20,6 +20,7 @@ I'm a Front-End Developer passionate about building functional, well-structured,
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
 </div>
 ###
+
 # 📊 GitHub Stats:<br>
 ![](https://github-readme-stats.vercel.app/api?username=Dev-Soares&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=Dev-Soares&theme=dark&hide_border=false)<br/>
