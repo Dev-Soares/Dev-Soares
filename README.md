@@ -2,7 +2,7 @@
 
 
 # 💫 About Me:
-I'm a Front-End Developer passionate about building functional, well-structured, and maintainable applications.<br>Currently working in IT support and infrastructure, I'm continuously learning and coding to grow as a software engineer.<br><br>🎯 Focused on clean code, best practices, and continuous learning.<br><br>🛠️ Technologies & Tools<br>HTML, CSS, JavaScript<br>React, Tailwind CSS<br>Git & GitHub<br>IT support, networks, and hardware maintenance
+I'm a FullStack Developer passionate about building functional, well-structured, and maintainable applications.<br>Currently working in IT support and infrastructure, I'm continuously learning and coding to grow as a software engineer.<br><br>🎯 Focused on clean code, best practices, and continuous learning.<br><br>🛠️ Technologies & Tools<br>HTML, CSS, JavaScript<br>React, Tailwind CSS<br>Git & GitHub<br>IT support, networks, and hardware maintenance
 
 
 ## 🌐 Socials:<br>
