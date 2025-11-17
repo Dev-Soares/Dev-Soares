@@ -1,5 +1,5 @@
 <h1 align="center">Bernardo Soares</h1>
-<h3 align="center">Fullstack Developer — React • Node.js • Cloud & DevOps</h3>
+<h3 align="center">Fullstack Developer — React • Node.js</h3>
 
 <p align="center">
   <a href="mailto:bernardo.soares30@outlook.com">Email</a> &nbsp;•&nbsp;
@@ -57,13 +57,6 @@ I aim to write software that is **maintainable**, **predictable**, and **designe
 <p align="center">
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=dark&hide_border=true&hide_title=true" />
   <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=dark&hide_border=true" />
-</p>
-
----
-
-## Contribution Activity
-<p align="center">
-  <img src="https://github.com/Dev-Soares/Dev-Soares/blob/output/github-contribution-grid-snake-dark.svg" />
 </p>
 
 ---
