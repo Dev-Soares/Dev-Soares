@@ -51,13 +51,6 @@ I aim to write software that is **maintainable**, **predictable**, and **designe
   <img src="https://img.shields.io/badge/Scrum-0D1117?style=for-the-badge&logo=scrumalliance" />
 </p>
 
----
-
-## GitHub Insights
-<p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=dark&hide_border=true&hide_title=true" />
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=dark&hide_border=true" />
-</p>
 
 ---
 
