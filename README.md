@@ -17,7 +17,7 @@
 
 ---
 
-## 👋 About Me
+## About Me
 
 I'm a **Fullstack Developer** focused on building **clean**, **scalable**, and **high-performance** applications with strong attention to **user experience** and **software architecture**.
 
@@ -25,47 +25,50 @@ My work sits at the intersection of **frontend excellence**, **robust backend sy
 
 I bring together:
 
-- ⚛️ Component-driven UI development with React  
-- 🧠 Well-structured backend logic and RESTful APIs  
-- 🔐 Secure authentication, authorization, and state management  
-- 🚀 Containerization, CI/CD pipelines, and production-ready deployments  
+- Component-driven UI development with React  
+- Well-structured backend logic and RESTful APIs  
+- Secure authentication, authorization, and state management  
+- Containerization, CI/CD pipelines, and production-ready deployments  
 
 I value software that is **maintainable**, **predictable**, and built to **grow gracefully over time**.
 
 ---
 
-## 🧰 Technical Stack
+## Technical Stack
 
-### 🎨 Frontend
+### Frontend
 <p>
-  <img src="https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/TailwindCSS-0D1117?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8" />
-  <img src="https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-  <img src="https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&logo=html5&logoColor=E34F26" />
-  <img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&logo=css3&logoColor=1572B6" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=redux&logoColor=764ABC" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=tailwindcss&logoColor=38BDF8" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=javascript&logoColor=F7DF1E" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=html5&logoColor=E34F26" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=css3&logoColor=1572B6" />
 </p>
 
-### 🛠 Backend
+### Backend
 <p>
-  <img src="https://img.shields.io/badge/Node.js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=3C873A" />
-  <img src="https://img.shields.io/badge/Express-0D1117?style=for-the-badge&logo=express" />
-  <img src="https://img.shields.io/badge/Prisma-0D1117?style=for-the-badge&logo=prisma&logoColor=2D3748" />
-  <img src="https://img.shields.io/badge/PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=336791" />
-  <img src="https://img.shields.io/badge/MongoDB-0D1117?style=for-the-badge&logo=mongodb&logoColor=47A248" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=nodedotjs&logoColor=3C873A" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=nestjs&logoColor=E0234E" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=express" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=prisma&logoColor=2D3748" />
 </p>
 
-### ⚙️ Tools & DevOps
+### Database
 <p>
-  <img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&logoColor=2496ED" />
-  <img src="https://img.shields.io/badge/Git-0D1117?style=for-the-badge&logo=git&logoColor=F05032" />
-  <img src="https://img.shields.io/badge/Azure%20DevOps-0D1117?style=for-the-badge&logo=azuredevops&logoColor=0078D7" />
-  <img src="https://img.shields.io/badge/Scrum-0D1117?style=for-the-badge&logo=scrumalliance&logoColor=6DB33F" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=postgresql&logoColor=336791" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=mongodb&logoColor=47A248" />
+</p>
+
+### Tools & DevOps
+<p>
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=docker&logoColor=2496ED" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=git&logoColor=F05032" />
+  <img src="https://img.shields.io/badge/-0D1117?style=flat-square&logo=azuredevops&logoColor=0078D7" />
 </p>
 
 ---
 
 <p align="center">
-  <i>
-    Building software with clarity, precision, and long-term value.
-  </i>
+  <i>Building software with clarity, precision, and long-term value.</i>
 </p>
