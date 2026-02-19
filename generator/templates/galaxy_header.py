@@ -1,11 +1,11 @@
-"""SVG template: Galaxy Header — the signature spiral galaxy banner (850x280)."""
+"""SVG template: Galaxy Header — the signature spiral galaxy banner (850x340)."""
 
 import math
 from generator.utils import spiral_points, deterministic_random, esc, resolve_arm_colors
 
 # ── Module-level constants ──
-WIDTH, HEIGHT = 850, 280
-CENTER_X, CENTER_Y = 425, 155
+WIDTH, HEIGHT = 850, 340
+CENTER_X, CENTER_Y = 425, 170
 MAX_RADIUS = 220
 SPIRAL_TURNS = 0.85
 NUM_POINTS = 30
@@ -240,15 +240,15 @@ def _build_tech_labels(galaxy_arms, arm_colors, all_arm_points, cx, cy):
 
             # Label glow (blurred duplicate behind — Step 9)
             arm_dots.append(
-                f'    <text x="{label_x:.1f}" y="{label_y + 3:.1f}" text-anchor="{anchor}" '
-                f'fill="{color}" font-size="9" font-family="monospace" opacity="0.2" '
+                f'    <text x="{label_x:.1f}" y="{label_y + 4:.1f}" text-anchor="{anchor}" '
+                f'fill="{color}" font-size="12" font-family="monospace" opacity="0.2" '
                 f'filter="url(#label-glow)">{esc(item)}</text>'
             )
 
             # Main label (Step 9)
             arm_dots.append(
-                f'    <text x="{label_x:.1f}" y="{label_y + 3:.1f}" text-anchor="{anchor}" '
-                f'fill="{color}" font-size="9" font-family="monospace" opacity="0.85">{esc(item)}</text>'
+                f'    <text x="{label_x:.1f}" y="{label_y + 4:.1f}" text-anchor="{anchor}" '
+                f'fill="{color}" font-size="12" font-family="monospace" opacity="0.85">{esc(item)}</text>'
             )
 
     return "\n".join(arm_dots)
@@ -297,24 +297,24 @@ def _build_orbital_rings(cx, cy, theme):
 def _build_galaxy_core(cx, cy, theme, initial):
     """Build the core layers (haze, glow, rings, solid core, initial)."""
     return (
-        f'    <!-- Outer haze -->\n'
+        f'    \n'
         f'    <circle cx="{cx}" cy="{cy}" r="40" fill="url(#core-haze-gradient)" opacity="0.4"/>\n'
-        f'    <!-- Inner glow -->\n'
+        f'    \n'
         f'    <circle cx="{cx}" cy="{cy}" r="24" fill="url(#core-inner-gradient)" opacity="0.6"/>\n'
-        f'    <!-- Outer ring -->\n'
+        f'    \n'
         f'    <ellipse cx="{cx}" cy="{cy}" rx="20" ry="18" fill="none" '
         f'stroke="{theme["synapse_cyan"]}" stroke-width="1.2" opacity="0.55" '
         f'stroke-dasharray="5 3" class="core-ring"/>\n'
-        f'    <!-- Inner ring -->\n'
+        f'    \n'
         f'    <circle cx="{cx}" cy="{cy}" r="14" fill="none" '
         f'stroke="{theme["dendrite_violet"]}" stroke-width="0.8" opacity="0.4" class="core-ring-inner"/>\n'
-        f'    <!-- Solid core -->\n'
+        f'    \n'
         f'    <circle cx="{cx}" cy="{cy}" r="11" fill="{theme["nebula"]}" '
         f'stroke="{theme["star_dust"]}" stroke-width="0.5"/>\n'
-        f'    <!-- Bright center dot -->\n'
+        f'    \n'
         f'    <circle cx="{cx}" cy="{cy}" r="3" fill="{theme["synapse_cyan"]}" '
         f'filter="url(#core-bright-glow)" opacity="0.9"/>\n'
-        f'    <!-- Initial -->\n'
+        f'    \n'
         f'    <text x="{cx}" y="{cy + 5}" text-anchor="middle" fill="{theme["synapse_cyan"]}" '
         f'font-size="14" font-weight="bold" font-family="monospace">{initial}</text>'
     )
@@ -460,41 +460,29 @@ def render(
 {glow_filters_str}
   </defs>
 
-  <!-- 1. Background -->
   <rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" rx="12" ry="12" fill="{theme['void']}"/>
 
-  <!-- 2. Outer nebula -->
-{outer_nebula}
+  {outer_nebula}
 
-  <!-- 3. Star field (3 layers) -->
-{stars_str}
+  {stars_str}
 
-  <!-- 4. Inner nebula -->
-{inner_nebula}
+  {inner_nebula}
 
-  <!-- 5. Shooting stars -->
-{shoot_stars_str}
+  {shoot_stars_str}
 
-  <!-- 6. Spiral arm paths (segmented fade) -->
-{arm_paths_str}
+  {arm_paths_str}
 
-  <!-- 7. Arm particles -->
-{arm_particles_str}
+  {arm_particles_str}
 
-  <!-- 8. Tech dots + leader lines + labels -->
-{arm_dots_str}
+  {arm_dots_str}
 
-  <!-- 9. Project stars -->
-{project_stars_str}
+  {project_stars_str}
 
-  <!-- 10. Orbital rings -->
-{orbital_rings}
+  {orbital_rings}
 
-  <!-- 11. Galaxy core -->
-{core}
+  {core}
 
-  <!-- 12. Profile text -->
-  <text x="{CENTER_X}" y="26" text-anchor="middle" fill="{theme['text_bright']}" font-size="20" font-weight="bold" font-family="sans-serif">{esc(name)}</text>
-  <text x="{CENTER_X}" y="44" text-anchor="middle" fill="{theme['text_dim']}" font-size="12" font-family="sans-serif">{esc(tagline)}</text>
-  <text x="{CENTER_X}" y="{HEIGHT - 12}" text-anchor="middle" fill="{theme['text_faint']}" font-size="11" font-family="monospace" font-style="italic">{esc(philosophy)}</text>
+  <text x="{CENTER_X}" y="40" text-anchor="middle" fill="{theme['text_bright']}" font-size="20" font-weight="bold" font-family="sans-serif">{esc(name)}</text>
+  <text x="{CENTER_X}" y="60" text-anchor="middle" fill="{theme['text_dim']}" font-size="12" font-family="sans-serif">{esc(tagline)}</text>
+  <text x="{CENTER_X}" y="{HEIGHT - 24}" text-anchor="middle" fill="{theme['text_faint']}" font-size="11" font-family="monospace" font-style="italic">{esc(philosophy)}</text>
 </svg>'''
