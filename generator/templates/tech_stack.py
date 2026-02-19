@@ -56,7 +56,6 @@ def _build_radar_needle(rcx, rcy, radius, theme):
     </g>'''
 
 def _build_radar_labels_and_dots(sector_data, galaxy_arms, rcx, rcy, radius, theme):
-    """Re-definindo a função que estava faltando no seu arquivo anterior."""
     parts = []
     for sec in sector_data:
         mid_deg = (sec["start_deg"] + sec["end_deg"]) / 2
@@ -67,4 +66,56 @@ def _build_radar_labels_and_dots(sector_data, galaxy_arms, rcx, rcy, radius, the
         anchor = "middle" if abs(lx - rcx) < 5 else ("start" if lx > rcx else "end")
 
         parts.append(f'<text x="{lx:.1f}" y="{ly:.1f}" fill="{sec["color"]}" font-size="10" font-family="monospace" text-anchor="{anchor}" dominant-baseline="middle">{esc(sec["name"])}</text>')
-        parts.append(f'<text x="{lx:.1f}" y="{ly+12:.1f}" fill="{theme["text_faint"]}" font-size="8" font-family="monospace" text-anchor="{anchor}" dominant-baseline="middle">({sec
+        parts.append(f'<text x="{lx:.1f}" y="{ly+12:.1f}" fill="{theme["text_faint"]}" font-size="8" font-family="monospace" text-anchor="{anchor}" dominant-baseline="middle">({sec["items"]})</text>')
+    
+    radii_cycle = [radius*0.4, radius*0.7, radius*0.9]
+    for sec_i, sec in enumerate(sector_data):
+        arm = galaxy_arms[sec_i]
+        items = arm.get("items", [])
+        for j, item in enumerate(items):
+            usable_start, usable_end = sec["start_deg"] + 10, sec["end_deg"] - 10
+            item_angle = (usable_start + usable_end) / 2 if len(items) == 1 else usable_start + (usable_end - usable_start) * j / (len(items) - 1)
+            item_rad = math.radians(item_angle - 90)
+            dot_r = radii_cycle[j % 3]
+            dx, dy = rcx + dot_r * math.cos(item_rad), rcy + dot_r * math.sin(item_rad)
+            pulse_begin = (item_angle / 360) * 6 - 0.3
+            parts.append(f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="3" fill="{sec["color"]}" opacity="0.35"><animate attributeName="opacity" values="0.35;1.0;0.35" dur="6s" begin="{pulse_begin if pulse_begin > 0 else 0:.2f}s" repeatCount="indefinite"/></circle>')
+    return "\n".join(parts)
+
+def render(languages: dict, galaxy_arms: list, theme: dict, exclude: list, max_display: int) -> str:
+    lang_data = calculate_language_percentages(languages, exclude, max_display)
+    all_arm_colors = resolve_arm_colors(galaxy_arms, theme)
+
+    left_x, start_y = 40, 85
+    rcx, rcy, radius = 630, 160, 80
+    
+    lang_height = start_y + len(lang_data) * 32 + 40
+    height = max(320, lang_height)
+
+    sector_data = []
+    for i, arm in enumerate(galaxy_arms):
+        sector_data.append({
+            "name": arm["name"],
+            "color": all_arm_colors[i],
+            "items": len(arm.get("items", [])),
+            "start_deg": i * 120 + 2,
+            "end_deg": (i + 1) * 120 - 2,
+        })
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}">
+  <defs>
+    <filter id="needle-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="radar-gradient" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="{theme.get('synapse_cyan', '#00d4ff')}" stop-opacity="0"/><stop offset="100%" stop-color="{theme.get('synapse_cyan', '#00d4ff')}" stop-opacity="0.3"/></radialGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="15" ry="15" fill="{theme['nebula']}" stroke="{theme['star_dust']}" stroke-width="1.5"/>
+  <g transform="translate(40, 45)"><rect width="3" height="15" fill="{theme['synapse_cyan']}" rx="1"/><text x="12" y="12" fill="{theme['text_faint']}" font-size="11" font-family="monospace" letter-spacing="3" font-weight="bold">LANGUAGE TELEMETRY</text></g>
+  <g transform="translate(465, 45)"><rect width="3" height="15" fill="{theme['dendrite_violet']}" rx="1"/><text x="12" y="12" fill="{theme['text_faint']}" font-size="11" font-family="monospace" letter-spacing="3" font-weight="bold">FOCUS SECTORS</text></g>
+  <line x1="425" y1="40" x2="425" y2="{height - 40}" stroke="{theme['star_dust']}" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  {_build_language_bars(lang_data, theme, left_x, start_y)}
+  <g opacity="0.9">
+    {_build_radar_grid(rcx, rcy, [30, 55, 80], theme)}
+    {_build_radar_sectors(sector_data, rcx, rcy, radius, theme)}
+    {_build_radar_needle(rcx, rcy, radius, theme)}
+    {_build_radar_labels_and_dots(sector_data, galaxy_arms, rcx, rcy, radius, theme)}
+  </g>
+</svg>'''
