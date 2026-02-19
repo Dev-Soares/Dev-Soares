@@ -41,10 +41,10 @@ Focused on building high-performance applications that drive business results.
 <br/>
 
 <div align="center">
-  <a href="mailto:nyx@stellarlabs.dev">
-    <img src="https://img.shields.io/badge/-Email-080c14?style=for-the-badge&logo=gmail&logoColor=00d4ff" alt="Email"/>
-  </a>
-  <a href="https://www.linkedin.com/in/nyxorion/">
+  <a href="mailto:bernardo.soares30@outlook.com">
+  <img src="https://img.shields.io/badge/-Email-080c14?style=for-the-badge&logo=microsoftoutlook&logoColor=00d4ff" alt="Email"/>
+</a>
+  <a href="https://www.linkedin.com/in/bernardo-soares-150096364/">
     <img src="https://img.shields.io/badge/-LinkedIn-080c14?style=for-the-badge&logo=linkedin&logoColor=a78bfa" alt="LinkedIn"/>
   </a>
 </div>
