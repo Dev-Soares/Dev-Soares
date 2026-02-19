@@ -1,208 +1,364 @@
-"""SVG template: Galaxy Header — the signature spiral galaxy banner (850x420)."""
+"""Interactive setup wizard for Galaxy Profile configuration."""
 
-import math
-from generator.utils import spiral_points, deterministic_random, esc, resolve_arm_colors
+from __future__ import annotations
 
-# ── Module-level constants ──
-# Altura ampliada significativamente para criar margens verticais generosas
-WIDTH, HEIGHT = 850, 420 
-# Centro deslocado para baixo para dar espaço ao título no topo
-CENTER_X, CENTER_Y = 425, 215 
-# Raio reduzido para afastar os braços e labels das bordas laterais
-MAX_RADIUS = 180 
-SPIRAL_TURNS = 0.85
-NUM_POINTS = 30
-# Escalas ajustadas para uma espiral mais aberta e centralizada
-X_SCALE, Y_SCALE = 1.65, 0.52 
-START_ANGLES = [25, 150, 265]
+import argparse
+import os
+import sys
+from typing import Optional
 
+import yaml
+from InquirerPy import inquirer
+from InquirerPy.validator import EmptyInputValidator
 
-def _build_glow_filters(galaxy_arms, arm_colors):
-    """Build the star glow filters, one per arm."""
-    glow_filters = []
-    for i, arm in enumerate(galaxy_arms):
-        color = arm_colors[i]
-        glow_filters.append(
-            f'    <filter id="star-glow-{i}" x="-100%" y="-100%" width="300%" height="300%">\n'
-            f'      <feGaussianBlur stdDeviation="3" result="blur"/>\n'
-            f'      <feFlood flood-color="{color}" flood-opacity="0.5" result="color"/>\n'
-            f'      <feComposite in="color" in2="blur" operator="in" result="glow"/>\n'
-            f'      <feMerge>\n'
-            f'        <feMergeNode in="glow"/>\n'
-            f'        <feMergeNode in="SourceGraphic"/>\n'
-            f'      </feMerge>\n'
-            f'    </filter>'
-        )
-    return "\n".join(glow_filters)
+from generator.config import ConfigError, validate_config
+from generator.tech_catalog import get_all_techs
+from generator.utils import DEFAULT_THEME, HEX_COLOR_RE
+_CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config.yml")
+
+ARM_COLORS = [
+    {"name": "synapse_cyan  (#00d4ff)", "value": "synapse_cyan"},
+    {"name": "dendrite_violet (#a78bfa)", "value": "dendrite_violet"},
+    {"name": "axon_amber  (#ffb020)", "value": "axon_amber"},
+]
+
+ALL_METRICS = ["commits", "stars", "prs", "issues", "repos"]
 
 
-def _build_starfield(username, width, height, theme):
-    """Build all 3 star depth layers."""
-    star_layers = [
-        {"count": 50, "label": "bg", "r_min": 0.3, "r_max": 0.8, "o_min": 0.08, "o_max": 0.3, "dur_min": 5.0, "dur_max": 9.0},
-        {"count": 25, "label": "mid", "r_min": 0.6, "r_max": 1.2, "o_min": 0.15, "o_max": 0.5, "dur_min": 3.5, "dur_max": 7.0},
-        {"count": 15, "label": "fg", "r_min": 1.0, "r_max": 1.8, "o_min": 0.4, "o_max": 0.7, "dur_min": 2.0, "dur_max": 4.5},
+def run_init():
+    """Orchestrate the full interactive setup wizard."""
+    print("\n🌌 Galaxy Profile — Interactive Setup\n")
+
+    existing = _detect_existing_config()
+    defaults = {}
+
+    if existing is not None:
+        action, defaults = _handle_existing_config(existing)
+        if action == "cancel":
+            print("Setup cancelled.")
+            return
+
+    essential = _prompt_essential(defaults)
+    arms = _prompt_galaxy_arms(defaults)
+
+    configure_advanced = inquirer.confirm(
+        message="Configure advanced options (bio, social, projects, theme)?",
+        default=False,
+    ).execute()
+
+    advanced = _prompt_advanced(defaults) if configure_advanced else {}
+
+    config = _build_config(essential, arms, advanced)
+    path = _save_config(config)
+
+    # Validate
+    try:
+        with open(path, "r") as f:
+            raw = yaml.safe_load(f)
+        validate_config(raw)
+        print(f"\n✅ Config saved and validated: {path}")
+    except ConfigError as e:
+        print(f"\n⚠️  Config saved to {path} but validation found issues: {e}")
+
+    _offer_generation()
+
+
+def _detect_existing_config() -> dict | None:
+    """Check if config.yml already exists. Return the parsed dict or None."""
+    path = os.path.normpath(_CONFIG_PATH)
+    if not os.path.isfile(path):
+        return None
+    try:
+        with open(path, "r") as f:
+            return yaml.safe_load(f)
+    except Exception:
+        return None
+
+
+def _handle_existing_config(existing: dict) -> tuple[str, dict]:
+    """Ask user what to do with existing config. Return (action, defaults)."""
+    action = inquirer.select(
+        message="config.yml already exists. What would you like to do?",
+        choices=[
+            {"name": "Overwrite — start from scratch", "value": "overwrite"},
+            {"name": "Edit — use current values as defaults", "value": "edit"},
+            {"name": "Cancel", "value": "cancel"},
+        ],
+    ).execute()
+
+    if action == "cancel":
+        return ("cancel", {})
+    if action == "edit":
+        return ("edit", existing if isinstance(existing, dict) else {})
+    return ("overwrite", {})
+
+
+def _prompt_essential(defaults: dict) -> dict:
+    """Collect essential fields: username, name, tagline."""
+    profile_defaults = defaults.get("profile", {})
+
+    username = inquirer.text(
+        message="GitHub username:",
+        default=defaults.get("username", ""),
+        validate=EmptyInputValidator("Username cannot be empty."),
+    ).execute()
+
+    name = inquirer.text(
+        message="Display name:",
+        default=profile_defaults.get("name", ""),
+        validate=EmptyInputValidator("Name cannot be empty."),
+    ).execute()
+
+    tagline = inquirer.text(
+        message="Tagline (short description):",
+        default=profile_defaults.get("tagline", ""),
+    ).execute()
+
+    return {"username": username, "name": name, "tagline": tagline}
+
+
+def _prompt_galaxy_arms(defaults: dict) -> list:
+    """Collect 3 galaxy arms, each with name, color, and technologies."""
+    all_techs = get_all_techs()
+    default_arms = defaults.get("galaxy_arms", [])
+    arms = []
+
+    for i in range(3):
+        print(f"\n--- Galaxy Arm {i + 1}/3 ---")
+        arm_default = default_arms[i] if i < len(default_arms) else {}
+
+        arm_name = inquirer.text(
+            message=f"Arm {i + 1} name (e.g. Frontend, Backend, DevOps):",
+            default=arm_default.get("name", ""),
+            validate=EmptyInputValidator("Arm name cannot be empty."),
+        ).execute()
+
+        default_color = arm_default.get("color", ARM_COLORS[i]["value"])
+        arm_color = inquirer.select(
+            message=f"Arm {i + 1} color:",
+            choices=ARM_COLORS,
+            default=default_color,
+        ).execute()
+
+        default_items = arm_default.get("items", [])
+        arm_techs = inquirer.fuzzy(
+            message=f"Arm {i + 1} technologies (type to filter, space to select):",
+            choices=all_techs,
+            default=default_items,
+            multiselect=True,
+            validate=lambda result: len(result) > 0,
+            invalid_message="Select at least one technology.",
+        ).execute()
+
+        arms.append({
+            "name": arm_name,
+            "color": arm_color,
+            "items": arm_techs,
+        })
+
+    return arms
+
+
+def _prompt_advanced(defaults: dict) -> dict:
+    """Collect optional advanced fields."""
+    result = {}
+    profile_defaults = defaults.get("profile", {})
+    social_defaults = defaults.get("social", {})
+
+    # Bio, company, location, philosophy
+    profile_fields = [
+        ("bio", "Bio (multi-line, use \\n for newlines):"),
+        ("company", "Company:"),
+        ("location", "Location:"),
+        ("philosophy", "Philosophy quote:"),
     ]
+    for key, prompt in profile_fields:
+        default = profile_defaults.get(key, "")
+        if key == "bio":
+            default = default.strip()
+        value = inquirer.text(message=prompt, default=default).execute()
+        if value:
+            result[key] = value.replace("\\n", "\n") if key == "bio" else value
 
-    stars = []
-    for layer in star_layers:
-        n, lbl = layer["count"], layer["label"]
-        sx = deterministic_random(f"{username}_sx_{lbl}", n, 20, width - 20)
-        sy = deterministic_random(f"{username}_sy_{lbl}", n, 20, height - 20)
-        sr = deterministic_random(f"{username}_sr_{lbl}", n, layer["r_min"], layer["r_max"])
-        so = deterministic_random(f"{username}_so_{lbl}", n, layer["o_min"], layer["o_max"])
-        sd = deterministic_random(f"{username}_sd_{lbl}", n, layer["dur_min"], layer["dur_max"])
+    # Social links
+    print("\n--- Social Links (leave blank to skip) ---")
+    social_fields = [("email", "Email:"), ("linkedin", "LinkedIn username:"), ("website", "Website URL:")]
+    social = {}
+    for key, prompt in social_fields:
+        value = inquirer.text(
+            message=prompt,
+            default=social_defaults.get(key, ""),
+        ).execute()
+        if value:
+            social[key] = value
+    if social:
+        result["social"] = social
 
-        accent_colors = {0: theme.get("synapse_cyan", "#00d4ff"), 4: theme.get("dendrite_violet", "#a78bfa"), 8: theme.get("axon_amber", "#ffb020")}
-        for i in range(n):
-            fill = accent_colors.get(i % 12, "#ffffff")
-            delay = f"{sd[i] * 0.3:.1f}s"
-            stars.append(f'    <circle cx="{sx[i]:.1f}" cy="{sy[i]:.1f}" r="{sr[i]:.2f}" fill="{fill}" opacity="{so[i]:.2f}" class="star-{lbl}" style="animation-delay: {delay}"/>')
-    return "\n".join(stars)
+    # Projects
+    projects = _prompt_projects(defaults)
+    if projects:
+        result["projects"] = projects
+
+    # Theme
+    customize_theme = inquirer.confirm(
+        message="Customize theme colors?",
+        default=False,
+    ).execute()
+    if customize_theme:
+        result["theme"] = _prompt_theme(defaults.get("theme", {}))
+
+    # Stats
+    metrics = inquirer.checkbox(
+        message="Which stats metrics to display?",
+        choices=[
+            {"name": "Commits", "value": "commits", "enabled": True},
+            {"name": "Stars", "value": "stars", "enabled": True},
+            {"name": "PRs", "value": "prs", "enabled": True},
+            {"name": "Issues", "value": "issues", "enabled": True},
+            {"name": "Repos", "value": "repos", "enabled": True},
+        ],
+    ).execute()
+    if metrics:
+        result["stats"] = {"metrics": metrics}
+
+    # Languages
+    print("\n--- Language Display Settings ---")
+    exclude_input = inquirer.text(
+        message="Languages to exclude (comma-separated, e.g. HTML,CSS,Shell):",
+        default=",".join(defaults.get("languages", {}).get("exclude", [])),
+    ).execute()
+    if exclude_input.strip():
+        exclude = [lang.strip() for lang in exclude_input.split(",") if lang.strip()]
+    else:
+        exclude = []
+
+    max_display = inquirer.text(
+        message="Max languages to display:",
+        default=str(defaults.get("languages", {}).get("max_display", 8)),
+    ).execute()
+    result["languages"] = {
+        "exclude": exclude,
+        "max_display": int(max_display) if max_display.isdigit() else 8,
+    }
+
+    return result
 
 
-def _build_nebulae(cx, cy, theme):
-    """Return the outer_nebula and inner_nebula SVG strings."""
-    outer_nebula = (
-        f'    <circle cx="{cx - 200}" cy="{cy - 50}" r="150" fill="{theme["dendrite_violet"]}" opacity="0.015" filter="url(#nebula-outer)"/>\n'
-        f'    <circle cx="{cx + 220}" cy="{cy + 30}" r="130" fill="{theme["axon_amber"]}" opacity="0.012" filter="url(#nebula-outer)"/>\n'
-        f'    <circle cx="{cx}" cy="{cy + 60}" r="180" fill="{theme["synapse_cyan"]}" opacity="0.01" filter="url(#nebula-outer)"/>'
+def _prompt_projects(defaults: dict) -> list:
+    """Collect featured projects in a loop."""
+    default_projects = defaults.get("projects", [])
+    projects = []
+
+    add_project = inquirer.confirm(
+        message="Add a featured project?",
+        default=len(default_projects) > 0,
+    ).execute()
+
+    idx = 0
+    while add_project:
+        proj_default = default_projects[idx] if idx < len(default_projects) else {}
+
+        repo = inquirer.text(
+            message="Repository (owner/repo):",
+            default=proj_default.get("repo", ""),
+            validate=EmptyInputValidator("Repository cannot be empty."),
+        ).execute()
+
+        arm = inquirer.select(
+            message="Associated galaxy arm (index):",
+            choices=[
+                {"name": "Arm 0", "value": 0},
+                {"name": "Arm 1", "value": 1},
+                {"name": "Arm 2", "value": 2},
+            ],
+            default=proj_default.get("arm", 0),
+        ).execute()
+
+        description = inquirer.text(
+            message="Short description:",
+            default=proj_default.get("description", ""),
+        ).execute()
+
+        projects.append({"repo": repo, "arm": arm, "description": description})
+        idx += 1
+
+        add_project = inquirer.confirm(
+            message="Add another project?",
+            default=idx < len(default_projects),
+        ).execute()
+
+    return projects
+
+
+def _prompt_theme(theme_defaults: dict) -> dict:
+    """Collect custom theme hex colors."""
+    theme = {}
+    for key, default_value in DEFAULT_THEME.items():
+        current = theme_defaults.get(key, default_value)
+        value = inquirer.text(
+            message=f"Theme {key} (hex):",
+            default=current,
+            validate=lambda v: bool(HEX_COLOR_RE.match(v)),
+            invalid_message="Must be a valid hex color (e.g. #00d4ff).",
+        ).execute()
+        theme[key] = value
+    return theme
+
+
+def _build_config(essential: dict, arms: list, advanced: dict) -> dict:
+    """Assemble the final config dictionary."""
+    config = {
+        "username": essential["username"],
+        "profile": {
+            "name": essential["name"],
+            "tagline": essential.get("tagline", ""),
+        },
+        "galaxy_arms": arms,
+    }
+
+    # Merge advanced profile fields
+    for key in ("bio", "company", "location", "philosophy"):
+        if key in advanced:
+            config["profile"][key] = advanced[key]
+
+    for key in ("social", "projects", "theme", "stats", "languages"):
+        if key in advanced:
+            config[key] = advanced[key]
+
+    return config
+
+
+def _save_config(config: dict) -> str:
+    """Serialize config to YAML and write to config.yml. Return the path."""
+    path = os.path.normpath(_CONFIG_PATH)
+
+    header = (
+        "# Galaxy Profile README Configuration\n"
+        "# Generated by: python -m generator.main init\n"
+        "#\n"
+        "# Regenerate SVGs with:\n"
+        "#   python -m generator.main\n"
+        "#\n"
+        "# Demo mode (no API calls):\n"
+        "#   python -m generator.main --demo\n\n"
     )
-    inner_nebula = (
-        f'    <circle cx="{cx}" cy="{cy}" r="90" fill="{theme["synapse_cyan"]}" opacity="0.04" filter="url(#nebula-inner)"/>\n'
-        f'    <circle cx="{cx - 80}" cy="{cy - 30}" r="70" fill="{theme["dendrite_violet"]}" opacity="0.035" filter="url(#nebula-inner)"/>\n'
-        f'    <circle cx="{cx + 90}" cy="{cy + 25}" r="65" fill="{theme["axon_amber"]}" opacity="0.03" filter="url(#nebula-inner)"/>'
-    )
-    return outer_nebula, inner_nebula
+
+    with open(path, "w") as f:
+        f.write(header)
+        yaml.dump(config, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
+    return path
 
 
-def _build_shooting_stars():
-    """Build the shooting star lines."""
-    shoot_data = [(100, 80, 250, 100, 6), (700, 70, 200, 90, 8), (350, 350, 180, 70, 7)]
-    shoot_stars = []
-    for idx, (sx_pos, sy_pos, tx, ty, dur) in enumerate(shoot_data):
-        shoot_stars.append(f'    <line x1="{sx_pos}" y1="{sy_pos}" x2="{sx_pos + 20}" y2="{sy_pos + 5}" stroke="url(#shoot-grad)" stroke-width="1.2" stroke-linecap="round" class="shooting-star" style="animation-delay: {idx * 2.5}s; --shoot-tx: {tx}px; --shoot-ty: {ty}px; animation-duration: {dur}s"/>')
-    return "\n".join(shoot_stars)
+def _offer_generation():
+    """Ask if user wants to generate SVGs now."""
+    generate_now = inquirer.confirm(
+        message="Generate SVGs now?",
+        default=True,
+    ).execute()
 
+    if generate_now:
+        print("\nGenerating SVGs...")
+        from generator.main import generate
 
-def _points_to_path(points):
-    """Build a quadratic Bezier SVG path string."""
-    d = f"M {points[0][0]:.1f} {points[0][1]:.1f}"
-    for j in range(1, len(points)):
-        px, py = points[j - 1]
-        x, y = points[j]
-        cpx, cpy = (px + x) / 2, (py + y) / 2
-        d += f" Q {px:.1f} {py:.1f} {cpx:.1f} {cpy:.1f}"
-    d += f" L {points[-1][0]:.1f} {points[-1][1]:.1f}"
-    return d
-
-
-def _build_spiral_arms(galaxy_arms, arm_colors, all_arm_points):
-    """Build arm paths and particles."""
-    arm_paths, arm_particles = [], []
-    opacity_steps, width_steps = [0.50, 0.40, 0.30, 0.20], [2.2, 1.9, 1.6, 1.3]
-
-    for arm_idx, arm in enumerate(galaxy_arms):
-        color, points = arm_colors[arm_idx], all_arm_points[arm_idx]
-        if len(points) < 2: continue
-        full_path_d = _points_to_path(points)
-        pts_per_seg = len(points) // 4
-        for seg in range(4):
-            start_i = seg * pts_per_seg
-            end_i = min(start_i + pts_per_seg + 1, len(points))
-            seg_pts = points[start_i:end_i]
-            if len(seg_pts) < 2: continue
-            seg_d = _points_to_path(seg_pts)
-            op, sw = opacity_steps[seg], width_steps[seg]
-            arm_paths.append(f'    <path d="{seg_d}" fill="none" stroke="{color}" stroke-width="{sw:.1f}" opacity="{op:.2f}" stroke-linecap="round"><animate attributeName="opacity" values="{op - 0.1:.2f};{op + 0.1:.2f};{op - 0.1:.2f}" dur="8s" begin="{arm_idx}s" repeatCount="indefinite"/></path>')
-        for p_idx in range(2):
-            delay = arm_idx * 4 + p_idx * 6
-            arm_particles.append(f'    <circle r="1.8" fill="{color}" opacity="0.6"><animateMotion dur="12s" begin="{delay}s" repeatCount="indefinite" path="{full_path_d}"/><animate attributeName="opacity" values="0;0.7;0.3;0" dur="12s" begin="{delay}s" repeatCount="indefinite"/></circle>')
-    return "\n".join(arm_paths), "\n".join(arm_particles)
-
-
-def _build_tech_labels(galaxy_arms, arm_colors, all_arm_points, cx, cy):
-    """Build tech dots and large labels with extra padding."""
-    arm_dots = []
-    for arm_idx, arm in enumerate(galaxy_arms):
-        color, points, items = arm_colors[arm_idx], all_arm_points[arm_idx], arm.get("items", [])
-        if not items: continue
-        available = len(points) - 10
-        spacing = max(1, available // len(items))
-        for i, item in enumerate(items):
-            pt_idx = min(8 + i * spacing, len(points) - 1)
-            px, py = points[pt_idx]
-            dx, dy = px - cx, py - cy
-            dist = math.sqrt(dx * dx + dy * dy) or 1
-            nx, ny = dx / dist, dy / dist
-            # Distância da label aumentada para 28px para evitar colisão com os braços
-            label_x, label_y = px + nx * 28, py + ny * 28
-            anchor = "start" if dx > 30 else ("end" if dx < -30 else "middle")
-
-            arm_dots.append(f'    <circle cx="{px:.1f}" cy="{py:.1f}" r="3.5" fill="{color}" opacity="0.85"><animate attributeName="opacity" values="0.85;1;0.85" dur="5s" begin="{i * 0.7}s" repeatCount="indefinite"/></circle>')
-            arm_dots.append(f'    <line x1="{px:.1f}" y1="{py:.1f}" x2="{label_x:.1f}" y2="{label_y:.1f}" stroke="{color}" stroke-width="0.8" opacity="0.3" stroke-dasharray="2 2"/>')
-            # Font-size aumentado para 12 e peso extra negrito para máxima visibilidade
-            arm_dots.append(f'    <text x="{label_x:.1f}" y="{label_y + 4:.1f}" text-anchor="{anchor}" fill="{color}" font-size="12" font-family="monospace" font-weight="900" opacity="0.2" filter="url(#label-glow)">{esc(item)}</text>')
-            arm_dots.append(f'    <text x="{label_x:.1f}" y="{label_y + 4:.1f}" text-anchor="{anchor}" fill="{color}" font-size="12" font-family="monospace" font-weight="900" opacity="1">{esc(item)}</text>')
-    return "\n".join(arm_dots)
-
-
-def _build_galaxy_core(cx, cy, theme, initial):
-    """Build the expanded core layers."""
-    return (
-        f'    <circle cx="{cx}" cy="{cy}" r="60" fill="url(#core-haze-gradient)" opacity="0.4"/>\n'
-        f'    <circle cx="{cx}" cy="{cy}" r="35" fill="url(#core-inner-gradient)" opacity="0.6"/>\n'
-        f'    <ellipse cx="{cx}" cy="{cy}" rx="30" ry="26" fill="none" stroke="{theme["synapse_cyan"]}" stroke-width="1.8" opacity="0.6" stroke-dasharray="6 4" class="core-ring"/>\n'
-        f'    <circle cx="{cx}" cy="{cy}" r="22" fill="none" stroke="{theme["dendrite_violet"]}" stroke-width="1.2" opacity="0.5" class="core-ring-inner"/>\n'
-        f'    <circle cx="{cx}" cy="{cy}" r="16" fill="{theme["nebula"]}" stroke="{theme["star_dust"]}" stroke-width="0.8"/>\n'
-        f'    <circle cx="{cx}" cy="{cy}" r="5" fill="{theme["synapse_cyan"]}" filter="url(#core-bright-glow)" opacity="1"/>\n'
-        f'    <text x="{cx}" y="{cy + 7}" text-anchor="middle" fill="{theme["synapse_cyan"]}" font-size="18" font-weight="bold" font-family="monospace">{initial}</text>'
-    )
-
-
-def render(config: dict, theme: dict, galaxy_arms: list, projects: list) -> str:
-    """Render the spacious galaxy header."""
-    username, profile = config.get("username", "user"), config.get("profile", {})
-    name, tagline, philosophy = profile.get("name", username), profile.get("tagline", ""), profile.get("philosophy", "")
-    initial = name[0].upper() if name else "?"
-    arm_colors = resolve_arm_colors(galaxy_arms, theme)
-    all_arm_points = [spiral_points(CENTER_X, CENTER_Y, START_ANGLES[i % 3], NUM_POINTS, MAX_RADIUS, SPIRAL_TURNS, X_SCALE, Y_SCALE) for i in range(len(galaxy_arms))]
-
-    glow_filters = _build_glow_filters(galaxy_arms, arm_colors)
-    stars_str = _build_starfield(username, WIDTH, HEIGHT, theme)
-    outer_nebula, inner_nebula = _build_nebulae(CENTER_X, CENTER_Y, theme)
-    shoot_stars_str = _build_shooting_stars()
-    arm_paths, arm_particles = _build_spiral_arms(galaxy_arms, arm_colors, all_arm_points)
-    arm_dots = _build_tech_labels(galaxy_arms, arm_colors, all_arm_points, CENTER_X, CENTER_Y)
-    core = _build_galaxy_core(CENTER_X, CENTER_Y, theme, initial)
-
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
-  <defs>
-    <style>
-      .star-bg {{ animation: twinkle-slow 7s ease-in-out infinite; }}
-      .star-mid {{ animation: twinkle-mid 5s ease-in-out infinite; }}
-      .star-fg {{ animation: twinkle-fast 3s ease-in-out infinite; }}
-      @keyframes twinkle-slow {{ 0%, 100% {{ opacity: 0.08; }} 50% {{ opacity: 0.3; }} }}
-      @keyframes twinkle-mid {{ 0%, 100% {{ opacity: 0.15; }} 50% {{ opacity: 0.5; }} }}
-      @keyframes twinkle-fast {{ 0%, 100% {{ opacity: 0.4; }} 50% {{ opacity: 0.8; }} }}
-      .core-ring {{ animation: pulse-core 3s ease-in-out infinite; }}
-      .core-ring-inner {{ animation: pulse-core 3s ease-in-out infinite 1.5s; }}
-      @keyframes pulse-core {{ 0%, 100% {{ stroke-opacity: 0.3; transform: scale(1); transform-origin: {CENTER_X}px {CENTER_Y}px; }} 50% {{ stroke-opacity: 0.8; transform: scale(1.08); transform-origin: {CENTER_X}px {CENTER_Y}px; }} }}
-      .shooting-star {{ opacity: 0; animation: shoot linear infinite; }}
-      @keyframes shoot {{ 0% {{ opacity: 0; transform: translate(0, 0); }} 5% {{ opacity: 0.9; }} 15% {{ opacity: 0.6; transform: translate(var(--shoot-tx), var(--shoot-ty)); }} 100% {{ opacity: 0; }} }}
-    </style>
-    <filter id="nebula-outer"><feGaussianBlur stdDeviation="80"/></filter>
-    <filter id="nebula-inner"><feGaussianBlur stdDeviation="40"/></filter>
-    <filter id="label-glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5" result="blur"/></filter>
-    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
-    <radialGradient id="core-haze-gradient" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="{theme['synapse_cyan']}" stop-opacity="0.5"/><stop offset="100%" stop-color="{theme['synapse_cyan']}" stop-opacity="0"/></radialGradient>
-    <radialGradient id="core-inner-gradient" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/><stop offset="100%" stop-color="{theme['synapse_cyan']}" stop-opacity="0"/></radialGradient>
-    <linearGradient id="shoot-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
-    {glow_filters}
-  </defs>
-  <rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" rx="16" ry="16" fill="{theme['void']}"/>
-  {outer_nebula}{stars_str}{inner_nebula}{shoot_stars_str}{arm_paths}{arm_particles}{arm_dots}{core}
-  <text x="{CENTER_X}" y="55" text-anchor="middle" fill="{theme['text_bright']}" font-size="32" font-weight="900" font-family="sans-serif">{esc(name)}</text>
-  <text x="{CENTER_X}" y="85" text-anchor="middle" fill="{theme['text_dim']}" font-size="16" font-family="sans-serif" font-weight="600">{esc(tagline)}</text>
-  <text x="{CENTER_X}" y="{HEIGHT - 30}" text-anchor="middle" fill="{theme['text_faint']}" font-size="13" font-family="monospace" font-style="italic">{esc(philosophy)}</text>
-</svg>'''
+        generate(argparse.Namespace(demo=False))
