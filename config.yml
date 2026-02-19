@@ -56,10 +56,10 @@ galaxy_arms:
 #   description: "..."        — Short description shown on the card
 projects:
   - repo: "Dev-Soares/Project-Builder"
-    arm: 0
+    arm: 1
     description: "A canvas tool that simplificates the architecture of a system"
   - repo: "Dev-Soares/SecurityOn-Frontend-"
-    arm: 1
+    arm: 0
     description: "Social media destined to teach users how to protect themselves online"
 
 # Theme color overrides (optional — defaults to deep space palette)
