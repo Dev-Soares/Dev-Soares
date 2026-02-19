@@ -87,10 +87,15 @@ def render(languages: dict, galaxy_arms: list, theme: dict, exclude: list, max_d
     all_arm_colors = resolve_arm_colors(galaxy_arms, theme)
 
     left_x, start_y = 40, 85
-    rcx, rcy, radius = 630, 160, 80
+    radius = 80
+    rcx = 630
     
+    # AJUSTE AQUI: rcy agora é calculado para ficar centralizado em relação à altura
+    # Aumentamos o height total para dar respiro (padding) na parte de baixo
     lang_height = start_y + len(lang_data) * 32 + 40
-    height = max(320, lang_height)
+    radar_center_ideal = 180 # Posição central vertical ideal
+    height = max(350, lang_height, radar_center_ideal + radius + 50) 
+    rcy = (height / 2) + 20 # Centraliza o radar com um pequeno offset para o título
 
     sector_data = []
     for i, arm in enumerate(galaxy_arms):
