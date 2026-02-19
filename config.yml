@@ -19,9 +19,8 @@ profile:
   company: "VR Tech"
   location: "Rio de Janeiro, Brazil"
   bio: |
-    Building tools that make developers' lives easier.
-    Passionate about distributed systems, developer experience, and the open-source ecosystem.
-  philosophy: '"The best code is the code that empowers others."'
+    Full-stack Developer focused on creating robust and scalable solutions with JavaScript.
+  philosophy: Transforming complex logic into simple and secure digital experiences.
 
 # Social links displayed at the bottom of the profile
 social:
