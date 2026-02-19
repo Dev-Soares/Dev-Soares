@@ -38,19 +38,17 @@ galaxy_arms:
     items:
       - "TypeScript"
       - "React"
-      - "CSS"
+      - "TailwindCSS"
   - name: "Backend"
     color: "synapse_cyan"
     items:
-      - "Python"
+      - "NestJS"
       - "Node.js"
       - "PostgreSQL"
   - name: "DevOps"
     color: "axon_amber"
     items:
       - "Docker"
-      - "GitHub Actions"
-      - "AWS"
 
 # Featured projects shown as constellation stars
 # Each project needs:
