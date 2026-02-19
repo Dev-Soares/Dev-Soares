@@ -62,3 +62,48 @@ def _build_project_card(i, proj, arm, color, card_width, card_x, theme):
 
     return f'''
     <g opacity="0" style="animation: card-appear 1s ease {delay} forwards">
+      <rect x="{card_x}" y="100" width="{card_width}" height="240" rx="25" fill="{color}" opacity="0.03" filter="url(#proj-glow-{i})"/>
+      <rect x="{card_x}" y="100" width="{card_width}" height="240" rx="25" fill="url(#card-bg-{i})" stroke="{theme['star_dust']}" stroke-width="2"/>
+      
+      <g transform="translate(0, 145)">
+          <circle cx="{card_cx}" cy="0" r="28" fill="none" stroke="{color}" stroke-width="1" stroke-dasharray="6,4" opacity="0.3">
+            <animateTransform attributeName="transform" type="rotate" from="0 {card_cx} 0" to="360 {card_cx} 0" dur="15s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="{card_cx}" cy="0" r="10" fill="{color}" filter="url(#proj-glow-{i})"/>
+          <circle cx="{card_cx}" cy="0" r="3" fill="#ffffff"/>
+      </g>
+
+      <text x="{card_cx}" y="210" fill="{theme['text_bright']}" font-size="19" font-weight="800" font-family="sans-serif" text-anchor="middle">{esc(repo_name)}</text>
+      
+      <g transform="translate(0, 15)">
+          {f'<text x="{card_cx}" y="225" fill="{theme["text_dim"]}" font-size="13" font-family="sans-serif" text-anchor="middle">{esc(desc_lines[0])}</text>' if len(desc_lines) > 0 else ''}
+          {f'<text x="{card_cx}" y="245" fill="{theme["text_dim"]}" font-size="13" font-family="sans-serif" text-anchor="middle">{esc(desc_lines[1])}</text>' if len(desc_lines) > 1 else ''}
+      </g>
+
+      <rect x="{card_cx - 50}" y="290" width="100" height="24" rx="12" fill="{color}" opacity="0.12"/>
+      <text x="{card_cx}" y="306" fill="{color}" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle" letter-spacing="1">{esc(arm['name']).upper()}</text>
+    </g>'''
+
+def render(projects: list, galaxy_arms: list, theme: dict) -> str:
+    all_arm_colors = resolve_arm_colors(galaxy_arms, theme)
+    n = min(len(projects), 3)
+    
+    if n == 0:
+        return f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}"><rect width="100%" height="100%" fill="{theme["nebula"]}"/><text x="50%" y="50%" fill="{theme["text_faint"]}" text-anchor="middle" font-family="monospace">NO NODES DETECTED</text></svg>'
+
+    card_width = 370 if n == 2 else 255
+    gap = (WIDTH - (card_width * n)) / (n + 1)
+    
+    cards = []
+    for i in range(n):
+        proj = projects[i]
+        arm_idx = proj.get("arm", 0) % len(galaxy_arms)
+        cards.append(_build_project_card(i, proj, galaxy_arms[arm_idx], all_arm_colors[arm_idx], card_width, gap + i * (card_width + gap), theme))
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
+  <defs>{_build_defs(n, card_width, gap, [all_arm_colors[p.get("arm",0)%len(galaxy_arms)] for p in projects[:n]], theme)}</defs>
+  <rect x="0.5" y="0.5" width="{WIDTH-1}" height="{HEIGHT-1}" rx="25" fill="{theme['nebula']}" stroke="{theme['star_dust']}" stroke-width="2"/>
+  {_build_starfield(n, WIDTH, HEIGHT, [all_arm_colors[p.get("arm",0)%len(galaxy_arms)] for p in projects[:n]], theme)}
+  {_build_title_area(n, WIDTH, HEIGHT, theme)}
+  {"".join(cards)}
+</svg>'''
