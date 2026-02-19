@@ -1,126 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="320" viewBox="0 0 850 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="380" viewBox="0 0 850 380">
   <defs>    <filter id="proj-glow-0" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" in="SourceGraphic" result="blur"/>
-      <feFlood flood-color="#00d4ff" flood-opacity="0.4" result="color"/>
+      <feGaussianBlur stdDeviation="6" in="SourceGraphic" result="blur"/>
+      <feFlood flood-color="#00d4ff" flood-opacity="0.3" result="color"/>
       <feComposite in="color" in2="blur" operator="in" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="proj-glow-1" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" in="SourceGraphic" result="blur"/>
-      <feFlood flood-color="#a78bfa" flood-opacity="0.4" result="color"/>
+      <feGaussianBlur stdDeviation="6" in="SourceGraphic" result="blur"/>
+      <feFlood flood-color="#a78bfa" flood-opacity="0.3" result="color"/>
       <feComposite in="color" in2="blur" operator="in" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <linearGradient id="card-bg-0" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#0f1623" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f1623" stop-opacity="0.98"/>
     </linearGradient>
     <linearGradient id="card-bg-1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#0f1623" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f1623" stop-opacity="0.98"/>
     </linearGradient>
     <style>
       @keyframes card-appear {
-        from { opacity: 0; transform: translateY(20px); }
+        from { opacity: 0; transform: translateY(30px); }
         to { opacity: 1; transform: translateY(0); }
       }
     </style></defs>
+  <rect x="0.5" y="0.5" width="849" height="379" rx="25" fill="#0f1623" stroke="#1a2332" stroke-width="2"/>
+  <circle cx="422.4" cy="265.9" r="0.8" fill="#00d4ff" opacity="0.3"/>
+<circle cx="833.6" cy="259.9" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="411.3" cy="342.7" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="172.4" cy="164.9" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="668.3" cy="331.7" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="456.1" cy="48.6" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="689.0" cy="273.7" r="0.8" fill="#00d4ff" opacity="0.3"/>
+<circle cx="68.3" cy="120.3" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="781.4" cy="306.1" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="32.3" cy="214.6" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="467.1" cy="77.1" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="739.1" cy="173.0" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="601.2" cy="290.2" r="0.8" fill="#00d4ff" opacity="0.3"/>
+<circle cx="420.5" cy="48.5" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="615.3" cy="49.2" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="689.6" cy="330.4" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="157.3" cy="105.2" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="268.8" cy="239.8" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="326.7" cy="275.3" r="0.8" fill="#00d4ff" opacity="0.3"/>
+<circle cx="369.5" cy="331.4" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="269.9" cy="321.6" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="331.9" cy="305.3" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="276.8" cy="255.9" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="410.2" cy="49.2" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="622.5" cy="170.9" r="0.8" fill="#00d4ff" opacity="0.3"/>
+<circle cx="449.7" cy="229.4" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="69.4" cy="70.2" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="11.7" cy="356.4" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="701.6" cy="20.5" r="0.8" fill="#94a3b8" opacity="0.3"/>
+<circle cx="681.0" cy="180.9" r="0.8" fill="#94a3b8" opacity="0.3"/>
   
-  <rect x="0.5" y="0.5" width="849" height="319" rx="20" fill="#0f1623" stroke="#1a2332" stroke-width="1.5"/>
-  
-  <circle cx="521.3" cy="237.9" r="0.7" fill="#00d4ff" opacity="0.22"><animate attributeName="opacity" values="0.22;0.7;0.22" dur="6.5s" repeatCount="indefinite"/></circle>
-<circle cx="316.7" cy="47.0" r="0.8" fill="#94a3b8" opacity="0.13"><animate attributeName="opacity" values="0.13;0.7;0.13" dur="6.8s" repeatCount="indefinite"/></circle>
-<circle cx="63.5" cy="186.4" r="0.4" fill="#94a3b8" opacity="0.16"><animate attributeName="opacity" values="0.16;0.7;0.16" dur="5.1s" repeatCount="indefinite"/></circle>
-<circle cx="538.7" cy="60.5" r="0.5" fill="#94a3b8" opacity="0.23"><animate attributeName="opacity" values="0.23;0.7;0.23" dur="5.6s" repeatCount="indefinite"/></circle>
-<circle cx="455.2" cy="138.8" r="0.5" fill="#94a3b8" opacity="0.28"><animate attributeName="opacity" values="0.28;0.7;0.28" dur="4.1s" repeatCount="indefinite"/></circle>
-<circle cx="576.6" cy="100.3" r="0.5" fill="#a78bfa" opacity="0.26"><animate attributeName="opacity" values="0.26;0.7;0.26" dur="6.7s" repeatCount="indefinite"/></circle>
-<circle cx="74.9" cy="184.8" r="0.7" fill="#94a3b8" opacity="0.17"><animate attributeName="opacity" values="0.17;0.7;0.17" dur="5.2s" repeatCount="indefinite"/></circle>
-<circle cx="275.3" cy="112.5" r="0.3" fill="#94a3b8" opacity="0.22"><animate attributeName="opacity" values="0.22;0.7;0.22" dur="4.4s" repeatCount="indefinite"/></circle>
-<circle cx="331.8" cy="101.7" r="0.5" fill="#94a3b8" opacity="0.14"><animate attributeName="opacity" values="0.14;0.7;0.14" dur="6.9s" repeatCount="indefinite"/></circle>
-<circle cx="81.9" cy="263.8" r="0.4" fill="#94a3b8" opacity="0.19"><animate attributeName="opacity" values="0.19;0.7;0.19" dur="4.2s" repeatCount="indefinite"/></circle>
-<circle cx="79.6" cy="189.6" r="0.4" fill="#00d4ff" opacity="0.15"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="6.6s" repeatCount="indefinite"/></circle>
-<circle cx="788.0" cy="284.6" r="0.6" fill="#94a3b8" opacity="0.27"><animate attributeName="opacity" values="0.27;0.7;0.27" dur="6.0s" repeatCount="indefinite"/></circle>
-<circle cx="624.9" cy="288.6" r="0.4" fill="#94a3b8" opacity="0.15"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="4.5s" repeatCount="indefinite"/></circle>
-<circle cx="249.6" cy="125.1" r="0.4" fill="#94a3b8" opacity="0.13"><animate attributeName="opacity" values="0.13;0.7;0.13" dur="5.8s" repeatCount="indefinite"/></circle>
-<circle cx="488.6" cy="86.2" r="0.4" fill="#94a3b8" opacity="0.13"><animate attributeName="opacity" values="0.13;0.7;0.13" dur="4.2s" repeatCount="indefinite"/></circle>
-<circle cx="333.5" cy="79.2" r="0.5" fill="#a78bfa" opacity="0.19"><animate attributeName="opacity" values="0.19;0.7;0.19" dur="7.0s" repeatCount="indefinite"/></circle>
-<circle cx="786.4" cy="220.3" r="0.7" fill="#94a3b8" opacity="0.15"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="5.2s" repeatCount="indefinite"/></circle>
-<circle cx="594.6" cy="198.9" r="0.5" fill="#94a3b8" opacity="0.16"><animate attributeName="opacity" values="0.16;0.7;0.16" dur="5.7s" repeatCount="indefinite"/></circle>
-<circle cx="498.6" cy="204.4" r="0.5" fill="#94a3b8" opacity="0.12"><animate attributeName="opacity" values="0.12;0.7;0.12" dur="6.4s" repeatCount="indefinite"/></circle>
-<circle cx="309.8" cy="146.2" r="0.3" fill="#94a3b8" opacity="0.29"><animate attributeName="opacity" values="0.29;0.7;0.29" dur="5.8s" repeatCount="indefinite"/></circle>
-<circle cx="613.7" cy="208.4" r="0.7" fill="#00d4ff" opacity="0.34"><animate attributeName="opacity" values="0.34;0.7;0.34" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="106.5" cy="109.7" r="0.7" fill="#94a3b8" opacity="0.29"><animate attributeName="opacity" values="0.29;0.7;0.29" dur="4.5s" repeatCount="indefinite"/></circle>
-<circle cx="416.4" cy="160.6" r="0.7" fill="#94a3b8" opacity="0.37"><animate attributeName="opacity" values="0.37;0.7;0.37" dur="3.1s" repeatCount="indefinite"/></circle>
-<circle cx="739.3" cy="267.2" r="1.1" fill="#94a3b8" opacity="0.38"><animate attributeName="opacity" values="0.38;0.7;0.38" dur="4.6s" repeatCount="indefinite"/></circle>
-<circle cx="518.1" cy="56.7" r="0.7" fill="#94a3b8" opacity="0.46"><animate attributeName="opacity" values="0.46;0.7;0.46" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="295.6" cy="12.8" r="0.9" fill="#a78bfa" opacity="0.49"><animate attributeName="opacity" values="0.49;0.7;0.49" dur="3.8s" repeatCount="indefinite"/></circle>
-<circle cx="134.9" cy="90.5" r="1.1" fill="#94a3b8" opacity="0.40"><animate attributeName="opacity" values="0.40;0.7;0.40" dur="3.1s" repeatCount="indefinite"/></circle>
-<circle cx="309.1" cy="24.1" r="0.8" fill="#94a3b8" opacity="0.43"><animate attributeName="opacity" values="0.43;0.7;0.43" dur="4.9s" repeatCount="indefinite"/></circle>
-<circle cx="494.9" cy="17.7" r="0.7" fill="#94a3b8" opacity="0.21"><animate attributeName="opacity" values="0.21;0.7;0.21" dur="4.1s" repeatCount="indefinite"/></circle>
-<circle cx="443.4" cy="233.8" r="1.3" fill="#94a3b8" opacity="0.45"><animate attributeName="opacity" values="0.45;0.7;0.45" dur="3.5s" repeatCount="indefinite"/></circle>
-<circle cx="78.1" cy="76.7" r="0.9" fill="#00d4ff" opacity="0.44"><animate attributeName="opacity" values="0.44;0.7;0.44" dur="4.3s" repeatCount="indefinite"/></circle>
-<circle cx="72.6" cy="229.9" r="1.2" fill="#94a3b8" opacity="0.35"><animate attributeName="opacity" values="0.35;0.7;0.35" dur="3.1s" repeatCount="indefinite"/></circle>
-  
-    <text x="40" y="50" fill="#64748b" font-size="12" font-family="monospace" letter-spacing="4" font-weight="bold">FEATURED SYSTEMS</text>
-    <circle cx="240" cy="46" r="3" fill="#00d4ff"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
-    <text x="810" y="50" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end" opacity="0.6">NODES ONLINE: 2</text>
-    <line x1="40" y1="65" x2="810" y2="65" stroke="#1a2332" stroke-width="1" opacity="0.5"/>
-  
-  
-    <g opacity="0" style="animation: card-appear 0.8s ease 0.0s forwards">
-      <rect x="43.333333333333336" y="85" width="360" height="200" rx="20" fill="#00d4ff" opacity="0.05" filter="url(#proj-glow-0)"/>
-      
-      <rect x="43.333333333333336" y="85" width="360" height="200" rx="20" fill="url(#card-bg-0)" stroke="#1a2332" stroke-width="2"/>
-      
-      <g transform="translate(0, 5)">
-          <circle cx="223.33333333333334" cy="125" r="22" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4">
-            <animateTransform attributeName="transform" type="rotate" from="0 223.33333333333334 125" to="360 223.33333333333334 125" dur="10s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="223.33333333333334" cy="125" r="8" fill="#00d4ff" filter="url(#proj-glow-0)">
-            <animate attributeName="r" values="7;9;7" dur="3s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="223.33333333333334" cy="125" r="3" fill="#ffffff"/>
-      </g>
-
-      <text x="223.33333333333334" y="175" fill="#f1f5f9" font-size="17" font-weight="bold" font-family="sans-serif" text-anchor="middle">Project-Builder</text>
-      
-      <g transform="translate(0, 15)">
-          <text x="223.33333333333334" y="190" fill="#94a3b8" font-size="12" font-family="sans-serif" text-anchor="middle">A canvas tool that simplificates the</text>
-          <text x="223.33333333333334" y="208" fill="#94a3b8" font-size="12" font-family="sans-serif" text-anchor="middle">architecture of a system</text>
-      </g>
-
-      <rect x="178.33333333333334" y="245" width="90" height="22" rx="11" fill="#00d4ff" opacity="0.1"/>
-      <text x="223.33333333333334" y="260" fill="#00d4ff" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">BACKEND</text>
+    <g transform="translate(45, 55)">
+        <text fill="#64748b" font-size="13" font-family="monospace" letter-spacing="5" font-weight="bold">FEATURED SYSTEMS</text>
+        <circle cx="255" cy="-4" r="3" fill="#00d4ff"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/></circle>
+        <line x1="0" y1="20" x2="760" y2="20" stroke="#1a2332" stroke-width="1.5" opacity="0.4"/>
     </g>
-    <g opacity="0" style="animation: card-appear 0.8s ease 0.2s forwards">
-      <rect x="446.66666666666663" y="85" width="360" height="200" rx="20" fill="#a78bfa" opacity="0.05" filter="url(#proj-glow-1)"/>
+  
+    <g opacity="0" style="animation: card-appear 1s ease 0.0s forwards">
+      <rect x="36.666666666666664" y="100" width="370" height="240" rx="25" fill="#00d4ff" opacity="0.03" filter="url(#proj-glow-0)"/>
+      <rect x="36.666666666666664" y="100" width="370" height="240" rx="25" fill="url(#card-bg-0)" stroke="#1a2332" stroke-width="2"/>
       
-      <rect x="446.66666666666663" y="85" width="360" height="200" rx="20" fill="url(#card-bg-1)" stroke="#1a2332" stroke-width="2"/>
-      
-      <g transform="translate(0, 5)">
-          <circle cx="626.6666666666666" cy="125" r="22" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4">
-            <animateTransform attributeName="transform" type="rotate" from="0 626.6666666666666 125" to="360 626.6666666666666 125" dur="10s" repeatCount="indefinite"/>
+      <g transform="translate(0, 145)">
+          <circle cx="221.66666666666666" cy="0" r="28" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="6,4" opacity="0.3">
+            <animateTransform attributeName="transform" type="rotate" from="0 221.66666666666666 0" to="360 221.66666666666666 0" dur="15s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="626.6666666666666" cy="125" r="8" fill="#a78bfa" filter="url(#proj-glow-1)">
-            <animate attributeName="r" values="7;9;7" dur="3s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="626.6666666666666" cy="125" r="3" fill="#ffffff"/>
+          <circle cx="221.66666666666666" cy="0" r="10" fill="#00d4ff" filter="url(#proj-glow-0)"/>
+          <circle cx="221.66666666666666" cy="0" r="3" fill="#ffffff"/>
       </g>
 
-      <text x="626.6666666666666" y="175" fill="#f1f5f9" font-size="17" font-weight="bold" font-family="sans-serif" text-anchor="middle">SecurityOn-Frontend-</text>
+      <text x="221.66666666666666" y="210" fill="#f1f5f9" font-size="19" font-weight="800" font-family="sans-serif" text-anchor="middle">Project-Builder</text>
       
       <g transform="translate(0, 15)">
-          <text x="626.6666666666666" y="190" fill="#94a3b8" font-size="12" font-family="sans-serif" text-anchor="middle">Social media destined to teach users how</text>
-          <text x="626.6666666666666" y="208" fill="#94a3b8" font-size="12" font-family="sans-serif" text-anchor="middle">to protect themselves online</text>
+          <text x="221.66666666666666" y="225" fill="#94a3b8" font-size="13" font-family="sans-serif" text-anchor="middle">A canvas tool that simplificates the</text>
+          <text x="221.66666666666666" y="245" fill="#94a3b8" font-size="13" font-family="sans-serif" text-anchor="middle">architecture of a system</text>
       </g>
 
-      <rect x="581.6666666666666" y="245" width="90" height="22" rx="11" fill="#a78bfa" opacity="0.1"/>
-      <text x="626.6666666666666" y="260" fill="#a78bfa" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">FRONTEND</text>
+      <rect x="171.66666666666666" y="290" width="100" height="24" rx="12" fill="#00d4ff" opacity="0.12"/>
+      <text x="221.66666666666666" y="306" fill="#00d4ff" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle" letter-spacing="1">BACKEND</text>
+    </g>
+    <g opacity="0" style="animation: card-appear 1s ease 0.25s forwards">
+      <rect x="443.33333333333337" y="100" width="370" height="240" rx="25" fill="#a78bfa" opacity="0.03" filter="url(#proj-glow-1)"/>
+      <rect x="443.33333333333337" y="100" width="370" height="240" rx="25" fill="url(#card-bg-1)" stroke="#1a2332" stroke-width="2"/>
+      
+      <g transform="translate(0, 145)">
+          <circle cx="628.3333333333334" cy="0" r="28" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="6,4" opacity="0.3">
+            <animateTransform attributeName="transform" type="rotate" from="0 628.3333333333334 0" to="360 628.3333333333334 0" dur="15s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="628.3333333333334" cy="0" r="10" fill="#a78bfa" filter="url(#proj-glow-1)"/>
+          <circle cx="628.3333333333334" cy="0" r="3" fill="#ffffff"/>
+      </g>
+
+      <text x="628.3333333333334" y="210" fill="#f1f5f9" font-size="19" font-weight="800" font-family="sans-serif" text-anchor="middle">SecurityOn-Frontend-</text>
+      
+      <g transform="translate(0, 15)">
+          <text x="628.3333333333334" y="225" fill="#94a3b8" font-size="13" font-family="sans-serif" text-anchor="middle">Social media destined to teach users how</text>
+          <text x="628.3333333333334" y="245" fill="#94a3b8" font-size="13" font-family="sans-serif" text-anchor="middle">to protect themselves online</text>
+      </g>
+
+      <rect x="578.3333333333334" y="290" width="100" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+      <text x="628.3333333333334" y="306" fill="#a78bfa" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle" letter-spacing="1">FRONTEND</text>
     </g>
 </svg>
