@@ -3,10 +3,7 @@
     <style>
       .star-bg { animation: twinkle 8s infinite; }
       @keyframes twinkle { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.4; } }
-      .core-glow { animation: pulse 4s infinite; }
-      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.1); opacity: 0.7; } }
     </style>
-    <filter id="label-glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5" result="blur"/></filter>
     <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
     <radialGradient id="core-haze-gradient"><stop offset="0%" stop-color="#00d4ff" stop-opacity="0.6"/><stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/></radialGradient>
         <filter id="star-glow-0" x="-100%" y="-100%" width="300%" height="300%">
@@ -28,9 +25,7 @@
       <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  
   <rect width="100%" height="100%" rx="20" fill="#080c14"/>
-  
       <circle cx="150.1" cy="409.2" r="0.31" fill="#ffffff" opacity="0.21" class="star-bg" style="animation-delay: 2.4s"/>
     <circle cx="42.5" cy="139.2" r="0.34" fill="#ffffff" opacity="0.15" class="star-bg" style="animation-delay: 1.6s"/>
     <circle cx="649.9" cy="128.7" r="0.74" fill="#ffffff" opacity="0.18" class="star-bg" style="animation-delay: 2.2s"/>
@@ -131,8 +126,7 @@
     <circle cx="425" cy="225" r="18" fill="#0f1623" stroke="#1a2332" stroke-width="1"/>
     <circle cx="425" cy="225" r="6" fill="#00d4ff" filter="url(#core-bright-glow)"/>
     <text x="425" y="232" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="monospace">B</text>
-
-  <text x="425" y="70" text-anchor="middle" fill="#f1f5f9" font-size="36" font-weight="300" font-family="sans-serif">Bernardo Soares</text>
+  <text x="425" y="70" text-anchor="middle" fill="#f1f5f9" font-size="36" font-weight="900" font-family="sans-serif">Bernardo Soares</text>
   <text x="425" y="105" text-anchor="middle" fill="#94a3b8" font-size="18" font-family="sans-serif" font-weight="600">Full Stack Developer</text>
   <text x="425" y="400" text-anchor="middle" fill="#64748b" font-size="14" font-family="monospace" font-style="italic">Transforming complex logic into simple and secure digital experiences.</text>
 </svg>
