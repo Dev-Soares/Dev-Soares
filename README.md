@@ -41,12 +41,10 @@ Focused on building high-performance applications that drive business results.
 <br/>
 
 <div align="center">
-  <div align="center">
   <a href="mailto:bernardo.soares30@outlook.com">
-    <img src="https://img.shields.io/badge/Email-bernardo.soares30@outlook.com-00d4ff?style=flat-square&logo=microsoftoutlook&logoColor=white" alt="Email"/>
+    <img src="https://img.shields.io/badge/-Email-00d4ff?style=flat&logo=microsoftoutlook&logoColor=white" alt="Email"/>
   </a>
   <a href="https://www.linkedin.com/in/bernardo-soares-150096364/">
-    <img src="https://img.shields.io/badge/LinkedIn-Bernardo_Soares-a78bfa?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/-LinkedIn-a78bfa?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-</div>
 </div>
