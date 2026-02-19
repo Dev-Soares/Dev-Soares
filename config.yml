@@ -86,9 +86,4 @@ stats:
 
 # Language display settings
 languages:
-  exclude:                     # Languages to hide from the telemetry chart
-    - "HTML"
-    - "CSS"
-    - "Shell"
-    - "Makefile"
   max_display: 8               # Maximum number of languages to show
