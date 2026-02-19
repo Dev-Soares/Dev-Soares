@@ -2,7 +2,7 @@
 
 from generator.utils import METRIC_ICONS, METRIC_LABELS, METRIC_COLORS, format_number
 
-WIDTH, HEIGHT = 950, 280
+WIDTH, HEIGHT = 850, 180
 
 
 def render(stats: dict, metrics: list, theme: dict) -> str:
