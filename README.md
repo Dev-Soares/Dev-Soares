@@ -1,45 +1,58 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=6E40C9&width=600&lines=Bernardo+Soares+%2F+Fullstack+Developer;Building+things+that+actually+matter.;Currently+at+VR+Tech+%E2%80%94+Rio+de+Janeiro)](https://git.io/typing-svg)
+<!--
+  ╔══════════════════════════════════════╗
+  ║         Bernardo Soares · README     ║
+  ╚══════════════════════════════════════╝
+-->
+
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=6E40C9&center=true&vCenter=true&width=700&lines=Bernardo+Soares;Fullstack+Developer+%E2%80%94+Rio+de+Janeiro%2C+BR;Building+things+that+actually+matter.)](https://git.io/typing-svg)
+
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bernardo-soares-dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-6E40C9?style=for-the-badge&logo=vercel&logoColor=white)](https://www.bernardosoaresdev.com.br/)
+[![GitHub](https://img.shields.io/badge/GitHub-161B22?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dev-Soares)
+
+</div>
 
 ---
 
-I'm a Brazilian fullstack developer focused on building software that's fast, clean, and purposeful. Not chasing trends — chasing good code.
+I write code for a living and take it seriously. Fullstack by trade, product-minded by nature — I care about what ships, not just what compiles.
 
-Working at **VR Tech**, based in **Rio de Janeiro**.  
-Portfolio at [bernardosoaresdev.com.br](https://www.bernardosoaresdev.com.br/) · Connect on [LinkedIn](https://www.linkedin.com/in/bernardo-soares-dev)
+Currently at **VR Tech**, building high-performance applications from **Rio de Janeiro**.
 
 ---
 
 ## Stack
 
-**Frontend**  
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+<div align="center">
 
-**Backend**  
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+### Frontend
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,html,css&theme=dark" />
 
-**Infra & Tools**  
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+### Backend
+<img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,postgres,prisma,redis&theme=dark" />
+
+### Infra & Tools
+<img src="https://skillicons.dev/icons?i=docker,git,github,figma,vscode,linux&theme=dark" />
+
+</div>
 
 ---
 
 ## Projects
 
+> Things I've built that I'm proud of.
+
 **[Project-Builder](https://github.com/Dev-Soares/Project-Builder)**  
-Visualize, model and generate system architecture. One of those tools you build because you needed it yourself.
+Visualize, model and generate system architecture. One of those tools you build because you needed it yourself — and then realize others do too.
 
 **[SecurityOn](https://github.com/Dev-Soares/SecurityOn_Frontend)**  
-Full-stack academic project built to teach online security. Frontend + backend, both in TypeScript.
+Full-stack platform built to teach online security. TypeScript end-to-end, frontend and backend. Academic project that ended up being a real product.
 
 **[Pork](https://github.com/Dev-Soares/Pork)**  
-Personal finance control system. Because managing money shouldn't be complicated.
+Personal finance control. Clean interface, no fluff. Because managing money shouldn't require an MBA.
 
 ---
 
@@ -47,19 +60,19 @@ Personal finance control system. Because managing money shouldn't be complicated
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&hide_title=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&langs_count=5&hide_title=true" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&rank_icon=github" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&hide_title=true" />
 
-</div>
+<br/>
 
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 </div>
 
 ---
 
 <div align="center">
-<sub><i>"Focused on building high-performance applications that drive business results."</i></sub>
+<sub>
+Profile views: <img src="https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=flat-square" alt="views" />
+</sub>
 </div>
