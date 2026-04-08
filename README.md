@@ -9,15 +9,15 @@
 <a href="https://www.linkedin.com/in/bernardo-soares-dev">
   <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="80" />
 </a>
-&nbsp;
+
 <a href="https://github.com/Dev-Soares">
   <img src="https://skillicons.dev/icons?i=github&theme=dark" height="80" />
 </a>
-&nbsp;
+
 <a href="https://www.bernardosoaresdev.com.br/">
   <img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="80" />
 </a>
-&nbsp;
+
 </div>
 
 <br/>
