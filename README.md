@@ -19,7 +19,7 @@
 </a>
 &nbsp;
 <a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://skillicons.dev/icons?i=outlook&theme=dark" height="40" />
+  <img src="https://img.shields.io/badge/email-bernardo.soares30%40outlook.com-0078D4?style=flat-square&logo=microsoftoutlook&logoColor=white" height="28" />
 </a>
 
 </div>
@@ -123,12 +123,13 @@ Visualize, model and generate system architecture. One of those tools you build 
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&rank_icon=github&cache_seconds=1800" />
-&nbsp;
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&hide_title=true&cache_seconds=1800" />
+[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
-<br/><br/>
+<br/>
 
+![](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS)
+
+</div>
 [![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 <br/>
