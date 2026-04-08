@@ -18,10 +18,6 @@
   <img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="40" />
 </a>
 &nbsp;
-<a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://img.shields.io/badge/email-bernardo.soares30%40outlook.com-0078D4?style=flat-square&logo=microsoftoutlook&logoColor=white" height="28" />
-</a>
-
 </div>
 
 <br/>
@@ -127,12 +123,6 @@ Visualize, model and generate system architecture. One of those tools you build 
 
 <br/>
 
-![](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS)
-
-</div>
-[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
-
-<br/>
 
 ![](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS)
 
