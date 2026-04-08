@@ -10,9 +10,9 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bernardo-soares-dev)
-[![Portfolio](https://img.shields.io/badge/Portfolio-6E40C9?style=for-the-badge&logo=vercel&logoColor=white)](https://www.bernardosoaresdev.com.br/)
-[![GitHub](https://img.shields.io/badge/GitHub-161B22?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dev-Soares)
+<a href="https://www.linkedin.com/in/bernardo-soares-dev" target="_blank"><img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="48" /></a>&nbsp;&nbsp;
+<a href="https://www.bernardosoaresdev.com.br/" target="_blank"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="48" /></a>&nbsp;&nbsp;
+<a href="https://github.com/Dev-Soares" target="_blank"><img src="https://skillicons.dev/icons?i=github&theme=dark" height="48" /></a>
 
 </div>
 
