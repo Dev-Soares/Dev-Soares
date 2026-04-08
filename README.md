@@ -89,43 +89,10 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 <br/>
 
----
-
-## Projects
-
-**[SecurityOn](https://github.com/Dev-Soares/SecurityOn_Frontend)** — Full-stack · TypeScript
-
-Collaborative platform for digital threat reporting.
-
-- **Backend:** NestJS 11, modular architecture, cursor pagination, rate limiting, JWT in HttpOnly cookies, bcrypt, Swagger
-- **Frontend:** React 19, infinite scroll, TanStack Query, React Hook Form + Zod, skeleton loaders, persistent light/dark theme
-
-<br/>
-
-**[Pork](https://github.com/Dev-Soares/Pork)** — Full-stack · TypeScript · `50+ active users`
-
-Personal finance control system — live in production with real users.
-
-- **Backend:** NestJS 11, PostgreSQL, Prisma ORM, JWT in HttpOnly cookies, Pino logging, Swagger/OpenAPI
-- **Frontend:** React 19, multi-step flow, financial dashboard, TanStack Query, Framer Motion, Tailwind CSS v4
-
-<br/>
-
-**[Project-Builder](https://github.com/Dev-Soares/Project-Builder)** — JavaScript
-
-Visualize, model and generate system architecture. One of those tools you build because you needed it yourself — and then realize others do too.
-
-<br/>
-
----
 
 ## Stats
 
 <div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&rank_icon=github&cache_seconds=1800" />
-&nbsp;
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&hide_title=true&cache_seconds=1800" />
 
 <br/><br/>
 
