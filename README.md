@@ -19,7 +19,7 @@
 </a>
 &nbsp;
 <a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" height="40" />
+  <img src="https://skillicons.dev/icons?i=gmail&theme=dark" height="40" />
 </a>
 
 </div>
