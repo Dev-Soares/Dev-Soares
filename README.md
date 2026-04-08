@@ -19,7 +19,7 @@
 </a>
 &nbsp;
 <a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" height="40" />
+  <img src="https://skillicons.dev/icons?i=outlook&theme=dark" height="40" />
 </a>
 
 </div>
@@ -129,7 +129,7 @@ Visualize, model and generate system architecture. One of those tools you build 
 
 <br/><br/>
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 <br/>
 
