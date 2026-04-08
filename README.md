@@ -19,7 +19,7 @@
 </a>
 &nbsp;
 <a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://skillicons.dev/icons?i=outlook&theme=dark" height="40" />
+  <img src="https://skillicons.dev/icons?i=outlook&theme=light" height="40" />
 </a>
 
 </div>
