@@ -7,15 +7,19 @@
 <br/>
 
 <a href="https://www.linkedin.com/in/bernardo-soares-dev">
-  <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="80" />
+  <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="40" />
 </a>
-
+&nbsp;
 <a href="https://github.com/Dev-Soares">
-  <img src="https://skillicons.dev/icons?i=github&theme=dark" height="80" />
+  <img src="https://skillicons.dev/icons?i=github&theme=dark" height="40" />
 </a>
-
+&nbsp;
 <a href="https://www.bernardosoaresdev.com.br/">
-  <img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="80" />
+  <img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="40" />
+</a>
+&nbsp;
+<a href="mailto:bernardo.soares30@outlook.com">
+  <img src="https://skillicons.dev/icons?i=outlook&theme=dark" height="40" />
 </a>
 
 </div>
@@ -32,7 +36,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 ## Stack
 
-<div align="start">
+<div align="center">
 
 **Frontend**
 
@@ -116,17 +120,19 @@ Visualize, model and generate system architecture. One of those tools you build 
 ---
 
 ## Stats
-<br/>
-<br/>
 
 <div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&rank_icon=github&cache_seconds=1800" />
+&nbsp;
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&hide_title=true&cache_seconds=1800" />
+
+<br/><br/>
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 <br/>
 
-
 ![](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
-<br/>
