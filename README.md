@@ -26,7 +26,7 @@
 
 <br/>
 
-Fullstack developer with real production experience — not just side projects. I build internal systems, dashboards and APIs that people actually use. Currently at **VR Tech** (Volta Redonda, BR), available for remote.
+Fullstack developer with real production experience, not just side projects. I build internal systems, dashboards and APIs that people actually use. Currently at **VR Tech** (Volta Redonda, BR), available for remote.
 
 Fluent in English. Product-minded. I care about what ships, not just what compiles.
 
