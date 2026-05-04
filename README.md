@@ -79,7 +79,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 **Fullstack Developer Jr · VR Tech** · `Dec 2025 – Present`
 
-Building and maintaining web applications — internal systems, dashboards, APIs and integrations — using React, TypeScript, Express and PostgreSQL for **5+ clients**. Responsible for testing and debugging practices that cut production bugs by **60%**. Working in an Agile squad from requirements to delivery.
+Building and maintaining web applications, internal systems, dashboards, APIs and integrations, using React, TypeScript, Express and PostgreSQL for **5+ clients**. Responsible for testing and debugging practices that cut production bugs by **60%**. Working in an Agile squad from requirements to delivery.
 
 <br/>
 
