@@ -1,26 +1,15 @@
 <div align="center">
 
-# Bernardo Soares
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Bernardo%20Soares&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Fullstack%20Developer&descAlignY=52&descSize=18" width="100%" />
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=6E40C9&center=true&vCenter=true&width=700&lines=Fullstack+Developer;React+%7C+NestJS+%7C+TypeScript+%7C+PostgreSQL;Building+things+that+actually+matter.;Volta+Redonda%2C+BR+%E2%80%94+Available+for+Remote)](https://git.io/typing-svg)
 
 <br/>
 
-<a href="https://www.linkedin.com/in/bernardo-soares-dev">
-  <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="40" />
-</a>
-&nbsp;
-<a href="https://github.com/Dev-Soares">
-  <img src="https://skillicons.dev/icons?i=github&theme=dark" height="40" />
-</a>
-&nbsp;
-<a href="https://www.bernardosoaresdev.com.br/">
-  <img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="40" />
-</a>
-&nbsp;
-<a href="mailto:bernardo.soares30@outlook.com">
-  <img src="https://skillicons.dev/icons?i=gmail&theme=dark" height="40" />
-</a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bernardo-soares-dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-6E40C9?style=for-the-badge&logo=vercel&logoColor=white)](https://www.bernardosoaresdev.com.br/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bernardo.soares30@outlook.com)
+![Profile Views](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=VIEWS)
 
 </div>
 
@@ -34,7 +23,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 ---
 
-## Stack
+## 🛠 Stack
 
 <div align="center">
 
@@ -75,7 +64,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 ---
 
-## Experience
+## 💼 Experience
 
 **Fullstack Developer Jr · VR Tech** · `Dec 2025 – Present`
 
@@ -89,17 +78,46 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 <br/>
 
+---
 
-## Stats
+## 🚀 Projects
 
 <div align="center">
 
-<br/><br/>
+<a href="https://github.com/Dev-Soares/REPO_1">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dev-Soares&repo=REPO_1&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9" />
+</a>
+<a href="https://github.com/Dev-Soares/REPO_2">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dev-Soares&repo=REPO_2&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9" />
+</a>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+</div>
 
 <br/>
 
-![](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS)
+---
+
+## 📊 Stats
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9&include_all_commits=true&count_private=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6E40C9&langs_count=8" />
+
+<br/><br/>
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=6E40C9&fire=6E40C9&currStreakLabel=6E40C9&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+
+<br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=Dev-Soares&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8" />
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer" width="100%" />
 
 </div>
