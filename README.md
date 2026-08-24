@@ -1,27 +1,34 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:6E40C9,100:B47CFF&height=170&section=header&text=Bernardo%20Soares&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Fullstack%20Developer&descAlignY=58&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=0:0B6BE0,100:4D9BFF&height=120&section=header&text=Bernardo%20Soares&fontSize=46&fontColor=4D9BFF&animation=fadeIn&fontAlignY=42&desc=Full-Stack%20Engineer&descAlignY=72&descSize=16&descAlign=50" width="100%" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=6E40C9&center=true&vCenter=true&width=700&lines=Fullstack+Developer;React+%7C+NestJS+%7C+TypeScript+%7C+PostgreSQL;Building+things+that+actually+matter.;Volta+Redonda%2C+BR+%E2%80%94+Available+for+Remote)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=0B6BE0&center=true&vCenter=true&width=700&lines=Full-Stack+Engineer;React+%7C+NestJS+%7C+TypeScript+%7C+PostgreSQL;Turning+business+needs+into+shipped+software.;Brazil+GMT-3+%E2%80%94+Available+for+Remote)](https://git.io/typing-svg)
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bernardo-soares-dev)
-[![Portfolio](https://img.shields.io/badge/Portfolio-6E40C9?style=for-the-badge&logo=vercel&logoColor=white)](https://www.bernardosoaresdev.com.br/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bernardo.soares30@outlook.com)
-![Profile Views](https://komarev.com/ghpvc/?username=Dev-Soares&color=6E40C9&style=for-the-badge&label=VIEWS)
+<a href="https://www.linkedin.com/in/bernardo-soares-dev"><img src="https://skillicons.dev/icons?i=linkedin&theme=dark" height="52" title="LinkedIn" /></a>
+&nbsp;
+<a href="https://www.bernardosoaresdev.com.br/"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" height="52" title="Portfolio" /></a>
+&nbsp;
+<a href="mailto:bernardo.soares30@outlook.com"><img src="https://skillicons.dev/icons?i=gmail&theme=dark" height="52" title="Email" /></a>
+&nbsp;
+<a href="https://github.com/Dev-Soares"><img src="https://skillicons.dev/icons?i=github&theme=dark" height="52" title="GitHub" /></a>
+
+<br/><br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=Dev-Soares&color=0B6BE0&style=for-the-badge&label=VIEWS)
 
 </div>
 
 <br/>
 
-Fullstack developer with real production experience, not just side projects. I build internal systems, dashboards and APIs that people actually use. Currently at **VR Tech** (Volta Redonda, BR), available for remote.
+Full-Stack Engineer building web applications, APIs and internal systems with React, TypeScript, NestJS and PostgreSQL. I translate business requirements into software, work directly with clients, and ship production-ready applications.
 
-Fluent in English. Product-minded. I care about what ships, not just what compiles.
+Currently at **VR Tech** (Volta Redonda, BR). Fluent in English, available for remote work — GMT-3.
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B6BE0,100:4D9BFF&height=3&section=header" width="100%" />
 
 ## Stack
 
@@ -29,165 +36,136 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 **Frontend**
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" title="TypeScript" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" title="React 19" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="40" title="Tailwind CSS" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg" height="40" title="Framer Motion" />
+<img src="https://skillicons.dev/icons?i=react,ts,js,tailwind&theme=dark" height="42" />
+
+<br/>
+
+<img src="https://cdn.simpleicons.org/reactquery/FF4154" height="26" title="TanStack Query" />&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/reacthookform/EC5990" height="26" title="React Hook Form" />&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/zod/3E67B1" height="26" title="Zod" />&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/framer/0055FF" height="26" title="Framer Motion" />
 
 <br/><br/>
 
 **Backend**
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" title="Node.js" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" height="40" title="NestJS" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" title="Express" />
+<img src="https://skillicons.dev/icons?i=nodejs,nestjs,express&theme=dark" height="42" />
+
+<br/>
+
+<img src="https://cdn.simpleicons.org/jsonwebtokens/D63AFF" height="26" title="JWT" />&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/swagger/85EA2D" height="26" title="Swagger / OpenAPI" />&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/openapiinitiative/6BA539" height="26" title="REST APIs" />
 
 <br/><br/>
 
 **Database**
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" title="PostgreSQL" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" height="40" title="Prisma ORM" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" title="MongoDB" />
+<img src="https://skillicons.dev/icons?i=postgres,prisma&theme=dark" height="42" />
 
 <br/><br/>
 
-**Tools**
+**DevOps &amp; Tools**
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" title="Docker" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" title="Git" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" height="40" title="Postman" />
+<img src="https://skillicons.dev/icons?i=docker,git,postman,jest,githubactions&theme=dark" height="42" />
+
+<sub>CI/CD &nbsp;·&nbsp; Agile &nbsp;·&nbsp; Scrum</sub>
 
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B6BE0,100:4D9BFF&height=3&section=header" width="100%" />
 
 ## Selected Work
 
-<table>
-<tr>
-<td width="50%" align="center">
-
 <a href="https://github.com/Dev-Soares/Strawby">
-<img src="https://raw.githubusercontent.com/Dev-Soares/Strawby/HEAD/client/public/logo.png" height="110" alt="Strawby" />
+<img src="https://raw.githubusercontent.com/Dev-Soares/Strawby/HEAD/client/public/pwa-any-512.png" height="120" align="left" hspace="28" vspace="10" alt="Strawby" />
 </a>
 
-### Strawby
+### [Strawby](https://github.com/Dev-Soares/Strawby) &nbsp;<sub><sup>[live&nbsp;→](https://www.strawby.site)</sup></sub>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" height="26" title="NestJS 11" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="26" title="React 19" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="26" title="TypeScript 5.9" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" height="26" title="Prisma 7" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="26" title="PostgreSQL 16" />
+<img src="https://skillicons.dev/icons?i=nestjs,react,ts,prisma,postgres&theme=dark" height="30" />
 
-</td>
-<td width="50%" align="center">
+<br/>
+
+Full-stack nutrition platform connecting patients and nutritionists, with secure **role-based authentication**, personalized meal plans, recipe management and progress tracking. Backend features resource-level authorization, scheduled background jobs, automated daily score and streak calculations, and integration with multiple food databases. Ships as an installable **PWA** with PDF generation and cloud deployment.
+
+<br clear="left" />
+
+<br/><br/>
 
 <a href="https://github.com/Dev-Soares/SecurityOn_Frontend">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dev-Soares/SecurityOn_Frontend/HEAD/public/OnSecurityDark.png" />
-  <img src="https://raw.githubusercontent.com/Dev-Soares/SecurityOn_Frontend/HEAD/public/OnSecurityLight.png" height="110" alt="SecurityOn" />
+  <img src="https://raw.githubusercontent.com/Dev-Soares/SecurityOn_Frontend/HEAD/public/OnSecurityLight.png" height="120" align="left" hspace="28" vspace="10" alt="SecurityOn" />
 </picture>
 </a>
 
-### SecurityOn
+### SecurityOn &nbsp;<sub><sup>[live&nbsp;→](https://securityon-landing.vercel.app)</sup></sub>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="26" title="TypeScript" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="26" title="React" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="26" title="Node.js" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="26" title="Tailwind CSS" />&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="26" title="PostgreSQL" />
+<img src="https://skillicons.dev/icons?i=nestjs,react,ts,prisma,postgres&theme=dark" height="30" />
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<br/>
 
-**Nutrition tracking platform** connecting patients and nutritionists.
+Collaborative platform for reporting digital threats. Modular **NestJS** architecture with cursor pagination, global rate limiting, secure authentication and REST APIs documented with **Swagger**. The React frontend uses infinite scroll via IntersectionObserver, TanStack Query, React Hook Form + Zod, skeleton loaders and a persisted light/dark theme.
 
-Patients log meals against a macro plan; a weighted daily-score algorithm and cron-driven streak system keep them engaged. Nutritionists manage patients, set plans and follow progress.
+<sub>[backend](https://github.com/Dev-Soares/SecurityOn_Backend) &nbsp;·&nbsp; [frontend](https://github.com/Dev-Soares/SecurityOn_Frontend) &nbsp;·&nbsp; [landing page](https://github.com/Dev-Soares/SecurityOn_LandingPage)</sub>
 
-`role-based auth` `food database` `PDF export` `PWA`
+<br clear="left" />
+
+<br/>
 
 <div align="center">
 
-<a href="https://github.com/Dev-Soares/Strawby">
-<img src="https://img.shields.io/badge/View%20Repository-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-</div>
-
-</td>
-<td width="50%" valign="top">
-
-**Online security learning platform** built as an academic project.
-
-Teaches users how to protect themselves online through guided content and interactive material. Shipped as a full product across three repositories.
-
-`backend` `frontend` `landing page`
-
-<div align="center">
-
-<a href="https://github.com/Dev-Soares/SecurityOn_Backend">
-<img src="https://img.shields.io/badge/Backend-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-<a href="https://github.com/Dev-Soares/SecurityOn_Frontend">
-<img src="https://img.shields.io/badge/Frontend-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-<a href="https://github.com/Dev-Soares/SecurityOn_LandingPage">
-<img src="https://img.shields.io/badge/Landing-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-</div>
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<a href="https://github.com/Dev-Soares?tab=repositories">
-<img src="https://img.shields.io/badge/See%20all%20repositories-0D1117?style=for-the-badge&logo=github&logoColor=6E40C9&labelColor=0D1117" />
-</a>
+<a href="https://github.com/Dev-Soares?tab=repositories"><b>See all repositories&nbsp;→</b></a>
 
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B6BE0,100:4D9BFF&height=3&section=header" width="100%" />
 
 ## Experience
 
-**Fullstack Developer Jr · VR Tech** · `Dec 2025 – Present`
+**Junior Full-Stack Engineer · VR Tech** · `Dec 2025 – Present` · Volta Redonda, BR
 
-Building and maintaining web applications, internal systems, dashboards, APIs and integrations, using React, TypeScript, Express and PostgreSQL for **5+ clients**. Responsible for testing and debugging practices that cut production bugs by **60%**. Working in an Agile squad from requirements to delivery.
-
-<br/>
-
-**Fullstack Developer Intern · PlatformCode.AI** · `Sep 2025 – Dec 2025`
-
-Built from scratch a system that interprets user-defined infrastructure diagrams and converts them into ready-to-use Terraform files — cutting setup time by **35%**. Integrated AI-assisted dev tools into the workflow, reducing build time by **50%**.
+Develop and maintain web applications, APIs, dashboards and system integrations with React, TypeScript, NestJS and PostgreSQL, delivering solutions that streamline business workflows for **5+ clients**. I work across the full lifecycle — technical planning, implementation, testing, deployment and production support — building end-to-end features spanning data modeling, REST APIs, business logic, third-party integrations and user-facing interfaces. Partner directly with clients to gather requirements and translate business needs into custom features.
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
+**Full-Stack Engineer Intern · PlatformCode.AI** · `Sep 2025 – Dec 2025` · Remote
+
+Built from scratch a system that interprets user-defined infrastructure diagrams and converts them into structured, ready-to-use Terraform files, reducing environment setup time. Helped establish and maintain a **microservices architecture** with well-defined service responsibilities, promoting scalability, maintainability and system integrity.
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B6BE0,100:4D9BFF&height=3&section=header" width="100%" />
+
+## Education
+
+**Bachelor's in Information Systems · UniFOA** · `Jan 2025 – Dec 2028 (expected)`
+
+University Center of Volta Redonda — Volta Redonda, Brazil.
+
+<br/>
+
+<sub>**Languages** &nbsp;·&nbsp; Portuguese (native) &nbsp;·&nbsp; English (fluent)</sub>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B6BE0,100:4D9BFF&height=3&section=header" width="100%" />
 
 ## Stats
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9&include_all_commits=true&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6E40C9&langs_count=8" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=0B6BE0&title_color=0B6BE0&include_all_commits=true&count_private=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0B6BE0&langs_count=8" />
 
 <br/><br/>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=6E40C9&fire=6E40C9&currStreakLabel=6E40C9&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dev-Soares&bg_color=0D1117&color=B47CFF&line=6E40C9&point=ffffff&area=true&area_color=6E40C9&hide_border=true&custom_title=Contribution%20Activity" width="100%" />
+[![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=0B6BE0&fire=0B6BE0&currStreakLabel=0B6BE0&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 <br/>
 
@@ -195,4 +173,4 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:B47CFF,100:6E40C9&height=110&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4D9BFF,100:0B6BE0&height=110&section=footer" width="100%" />
