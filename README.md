@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Bernardo%20Soares&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Fullstack%20Developer&descAlignY=52&descSize=18" width="100%" />
+# Bernardo Soares
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=6E40C9&center=true&vCenter=true&width=700&lines=Fullstack+Developer;React+%7C+NestJS+%7C+TypeScript+%7C+PostgreSQL;Building+things+that+actually+matter.;Volta+Redonda%2C+BR+%E2%80%94+Available+for+Remote)](https://git.io/typing-svg)
 
@@ -23,7 +23,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 ---
 
-## 🛠 Stack
+## Stack
 
 <div align="center">
 
@@ -64,7 +64,53 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 ---
 
-## 💼 Experience
+## Selected Work
+
+### [Strawby](https://github.com/Dev-Soares/Strawby)
+
+Nutrition tracking platform connecting patients and nutritionists. Patients log meals against a macro plan; a weighted daily-score algorithm and cron-driven streak system keep them engaged. Nutritionists manage patients, set plans and follow progress.
+
+Role-based auth, multi-source food database, PDF export, PWA frontend. Production-shaped monorepo on a strict documented architecture.
+
+`NestJS 11` `React 19` `TypeScript 5.9` `Prisma 7` `PostgreSQL 16` `PWA`
+
+<br/>
+
+### [Project-Builder](https://github.com/Dev-Soares/Project-Builder)
+
+Visualize, model and generate your system architecture. Interprets user-defined infrastructure diagrams and converts them into ready-to-use Terraform files — cut environment setup time by 35%.
+
+`JavaScript` `Terraform` `IaC`
+
+<br/>
+
+### [Pork](https://github.com/Dev-Soares/Pork_Backend)
+
+Personal finance REST API. Categorized expenses, savings goals and a financial profile per user (salary, spending plan, savings target). JWT auth over HTTP-only cookies.
+
+`NestJS` `PostgreSQL` `Prisma` `Docker`
+
+<br/>
+
+### [SecurityOn](https://github.com/Dev-Soares/SecurityOn_Frontend)
+
+Academic platform teaching users about online security. Full product across three repos — [backend](https://github.com/Dev-Soares/SecurityOn_Backend), [frontend](https://github.com/Dev-Soares/SecurityOn_Frontend) and [landing page](https://github.com/Dev-Soares/SecurityOn_LandingPage).
+
+`TypeScript` `React` `Node.js`
+
+<br/>
+
+### [fullstack-app-template](https://github.com/Dev-Soares/fullstack-app-template)
+
+My opinionated starting point for web applications — the conventions and wiring I don't want to rebuild on every project.
+
+`TypeScript` `Monorepo`
+
+<br/>
+
+---
+
+## Experience
 
 **Fullstack Developer Jr · VR Tech** · `Dec 2025 – Present`
 
@@ -80,24 +126,7 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 ---
 
-## 🚀 Projects
-
-<div align="center">
-
-<a href="https://github.com/Dev-Soares/REPO_1">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dev-Soares&repo=REPO_1&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9" />
-</a>
-<a href="https://github.com/Dev-Soares/REPO_2">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dev-Soares&repo=REPO_2&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=6E40C9&title_color=6E40C9" />
-</a>
-
-</div>
-
-<br/>
-
----
-
-## 📊 Stats
+## Stats
 
 <div align="center">
 
@@ -107,17 +136,5 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 <br/><br/>
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=6E40C9&fire=6E40C9&currStreakLabel=6E40C9&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
-
-<br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=Dev-Soares&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer" width="100%" />
 
 </div>
