@@ -160,16 +160,7 @@ University Center of Volta Redonda — Volta Redonda, Brazil.
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Dev-Soares&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=0B6BE0&title_color=0B6BE0&include_all_commits=true&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-Soares&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0B6BE0&langs_count=8" />
-
-<br/><br/>
-
 [![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=0B6BE0&fire=0B6BE0&currStreakLabel=0B6BE0&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/Dev-Soares/Dev-Soares/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake animation" />
 
 </div>
 
