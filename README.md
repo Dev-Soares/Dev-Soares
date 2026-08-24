@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bernardo Soares
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:6E40C9,100:B47CFF&height=170&section=header&text=Bernardo%20Soares&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Fullstack%20Developer&descAlignY=58&descSize=16" width="100%" />
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=6E40C9&center=true&vCenter=true&width=700&lines=Fullstack+Developer;React+%7C+NestJS+%7C+TypeScript+%7C+PostgreSQL;Building+things+that+actually+matter.;Volta+Redonda%2C+BR+%E2%80%94+Available+for+Remote)](https://git.io/typing-svg)
 
@@ -21,7 +21,7 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
 
 ## Stack
 
@@ -62,53 +62,101 @@ Fluent in English. Product-minded. I care about what ships, not just what compil
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
 
 ## Selected Work
 
-### [Strawby](https://github.com/Dev-Soares/Strawby)
+<table>
+<tr>
+<td width="50%" align="center">
 
-Nutrition tracking platform connecting patients and nutritionists. Patients log meals against a macro plan; a weighted daily-score algorithm and cron-driven streak system keep them engaged. Nutritionists manage patients, set plans and follow progress.
+<a href="https://github.com/Dev-Soares/Strawby">
+<img src="https://raw.githubusercontent.com/Dev-Soares/Strawby/HEAD/client/public/logo.png" height="110" alt="Strawby" />
+</a>
 
-Role-based auth, multi-source food database, PDF export, PWA frontend. Production-shaped monorepo on a strict documented architecture.
+### Strawby
 
-`NestJS 11` `React 19` `TypeScript 5.9` `Prisma 7` `PostgreSQL 16` `PWA`
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" height="26" title="NestJS 11" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="26" title="React 19" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="26" title="TypeScript 5.9" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" height="26" title="Prisma 7" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="26" title="PostgreSQL 16" />
+
+</td>
+<td width="50%" align="center">
+
+<a href="https://github.com/Dev-Soares/SecurityOn_Frontend">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dev-Soares/SecurityOn_Frontend/HEAD/public/OnSecurityDark.png" />
+  <img src="https://raw.githubusercontent.com/Dev-Soares/SecurityOn_Frontend/HEAD/public/OnSecurityLight.png" height="110" alt="SecurityOn" />
+</picture>
+</a>
+
+### SecurityOn
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="26" title="TypeScript" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="26" title="React" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="26" title="Node.js" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="26" title="Tailwind CSS" />&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="26" title="PostgreSQL" />
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Nutrition tracking platform** connecting patients and nutritionists.
+
+Patients log meals against a macro plan; a weighted daily-score algorithm and cron-driven streak system keep them engaged. Nutritionists manage patients, set plans and follow progress.
+
+`role-based auth` `food database` `PDF export` `PWA`
+
+<div align="center">
+
+<a href="https://github.com/Dev-Soares/Strawby">
+<img src="https://img.shields.io/badge/View%20Repository-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
+
+</td>
+<td width="50%" valign="top">
+
+**Online security learning platform** built as an academic project.
+
+Teaches users how to protect themselves online through guided content and interactive material. Shipped as a full product across three repositories.
+
+`backend` `frontend` `landing page`
+
+<div align="center">
+
+<a href="https://github.com/Dev-Soares/SecurityOn_Backend">
+<img src="https://img.shields.io/badge/Backend-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://github.com/Dev-Soares/SecurityOn_Frontend">
+<img src="https://img.shields.io/badge/Frontend-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://github.com/Dev-Soares/SecurityOn_LandingPage">
+<img src="https://img.shields.io/badge/Landing-6E40C9?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<a href="https://github.com/Dev-Soares?tab=repositories">
+<img src="https://img.shields.io/badge/See%20all%20repositories-0D1117?style=for-the-badge&logo=github&logoColor=6E40C9&labelColor=0D1117" />
+</a>
+
+</div>
 
 <br/>
 
-### [Project-Builder](https://github.com/Dev-Soares/Project-Builder)
-
-Visualize, model and generate your system architecture. Interprets user-defined infrastructure diagrams and converts them into ready-to-use Terraform files — cut environment setup time by 35%.
-
-`JavaScript` `Terraform` `IaC`
-
-<br/>
-
-### [Pork](https://github.com/Dev-Soares/Pork_Backend)
-
-Personal finance REST API. Categorized expenses, savings goals and a financial profile per user (salary, spending plan, savings target). JWT auth over HTTP-only cookies.
-
-`NestJS` `PostgreSQL` `Prisma` `Docker`
-
-<br/>
-
-### [SecurityOn](https://github.com/Dev-Soares/SecurityOn_Frontend)
-
-Academic platform teaching users about online security. Full product across three repos — [backend](https://github.com/Dev-Soares/SecurityOn_Backend), [frontend](https://github.com/Dev-Soares/SecurityOn_Frontend) and [landing page](https://github.com/Dev-Soares/SecurityOn_LandingPage).
-
-`TypeScript` `React` `Node.js`
-
-<br/>
-
-### [fullstack-app-template](https://github.com/Dev-Soares/fullstack-app-template)
-
-My opinionated starting point for web applications — the conventions and wiring I don't want to rebuild on every project.
-
-`TypeScript` `Monorepo`
-
-<br/>
-
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
 
 ## Experience
 
@@ -124,7 +172,7 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:6E40C9,100:B47CFF&height=3&section=header" width="100%" />
 
 ## Stats
 
@@ -137,4 +185,14 @@ Built from scratch a system that interprets user-defined infrastructure diagrams
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Dev-Soares&theme=tokyonight&hide_border=true&background=0D1117&ring=6E40C9&fire=6E40C9&currStreakLabel=6E40C9&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
+<br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dev-Soares&bg_color=0D1117&color=B47CFF&line=6E40C9&point=ffffff&area=true&area_color=6E40C9&hide_border=true&custom_title=Contribution%20Activity" width="100%" />
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/Dev-Soares/Dev-Soares/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake animation" />
+
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:B47CFF,100:6E40C9&height=110&section=footer" width="100%" />
